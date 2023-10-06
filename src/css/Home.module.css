@@ -1,0 +1,60 @@
+.backgroundGradient {
+  --gradient-duration: 45s;
+
+  background: linear-gradient(
+    136deg,
+    theme("colors.main-blue"),
+    theme("colors.powder-blue"),
+    theme("colors.french-gray"),
+    theme("colors.bone"),
+    theme("colors.timberwolf")
+  );
+  background-size: 1200% 1200%;
+  -webkit-animation: gradient-animation var(--gradient-duration) ease infinite;
+  -moz-animation: gradient-animation var(--gradient-duration) ease infinite;
+  -o-animation: gradient-animation var(--gradient-duration) ease infinite;
+  animation: gradient-animation var(--gradient-duration) ease infinite;
+  height: 100%;
+}
+
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 7%;
+  }
+
+  50% {
+    background-position: 100% 94%;
+  }
+
+  100% {
+    background-position: 0% 7%;
+  }
+}
+
+@-o-keyframes gradient-animation {
+  0% {
+    background-position: 0% 7%;
+  }
+
+  50% {
+    background-position: 100% 94%;
+  }
+
+  100% {
+    background-position: 0% 7%;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 7%;
+  }
+
+  50% {
+    background-position: 100% 94%;
+  }
+
+  100% {
+    background-position: 0% 7%;
+  }
+}

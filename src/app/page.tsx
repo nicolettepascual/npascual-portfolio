@@ -1,7 +1,16 @@
-import Image from "next/image";
+import cx from "classnames";
+import LandingContent from "@/components/Home/LandingContent";
+import styles from "@/css/Home.module.css";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <div
+      className={cx(
+        "min-h-screen flex items-center justify-center py-10 px-3 sm:px-5",
+        styles.backgroundGradient
+      )}
+    >
+      <LandingContent />
+    </div>
   );
 }
