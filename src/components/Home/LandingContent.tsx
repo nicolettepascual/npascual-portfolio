@@ -5,7 +5,7 @@ const LandingContent = () => (
       Nicolette Pascual
     </p>
     <p className="text-base text-center leading-relaxed">
-      Front-End developer / Web Developer from the Philippines
+      Front-End Developer / Web Developer from the Philippines
     </p>
   </div>
 );

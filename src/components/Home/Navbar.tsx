@@ -26,11 +26,15 @@ const Navbar = () => {
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             {/* Main Icon */}
             <a href="#" className="">
-              <div className="avatar">
-                <div className="w-16 rounded">
-                  {/* <img src="" /> */}
-                  <h1 className="text-xl text-white font-bold">N</h1>
-                </div>
+              <div className="w-16">
+                <h1
+                  className={cx(
+                    "text-xl font-bold",
+                    showMenuNavbar ? "text-gray-500" : "text-white"
+                  )}
+                >
+                  NP
+                </h1>
               </div>
             </a>
             {/* Menu button */}
