@@ -1,20 +1,11 @@
-import cx from "classnames";
-import Navbar from "@/components/Home/Navbar";
-import LandingContent from "@/components/Home/LandingContent";
-import styles from "@/css/Home.module.css";
+import LandingContainer from "@/components/Home/LandingContainer";
+import About from "@/components/Home/About";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <div
-        className={cx(
-          "min-h-screen flex items-center justify-center py-10 px-3 sm:px-5",
-          styles.backgroundGradient
-        )}
-      >
-        <LandingContent />
-      </div>
+      <LandingContainer />
+      <About />
     </>
   );
 }

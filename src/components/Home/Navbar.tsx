@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cx from "classnames";
-import Link from "next/link";
 
 const Navbar = () => {
   const [showMenuNavbar, setShowMenuNavbar] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const menu = [
     { name: "About", url: "/" },
@@ -14,72 +14,81 @@ const Navbar = () => {
     { name: "Contact", url: "/" },
   ];
 
+  const fontColor =
+    isScrolled || showMenuNavbar ? "text-gray-500" : "text-white";
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 0);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
+
   return (
     <nav
       className={cx(
-        "w-full absolute text-gray md:bg-transparent md:text-white transition-all",
-        showMenuNavbar ? "bg-gray-100" : "bg-transparent"
+        "fixed w-full transition-all duration-300 top-0 z-50 ",
+        (isScrolled || showMenuNavbar) && "bg-white shadow-lg",
+        !isScrolled && !showMenuNavbar && "bg-transparent"
       )}
     >
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 transition-all">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            {/* Main Icon */}
-            <a href="#" className="">
-              <div className="w-16">
-                <h1
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex h-16 items-center justify-between">
+          <div className="w-full flex items-center justify-between">
+            <div className="flex-shrink-0">
+              <span className={cx("font-semibold text-lg", fontColor)}>NP</span>
+            </div>
+            <div className="hidden md:block ml-10 space-x-4">
+              {menu.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.url}
                   className={cx(
-                    "text-xl font-bold",
-                    showMenuNavbar ? "text-gray-500" : "text-white"
+                    "hover:text-black transition duration-300",
+                    fontColor
                   )}
                 >
-                  NP
-                </h1>
-              </div>
-            </a>
-            {/* Menu button */}
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-500 rounded-md outline-none"
-                onClick={() => setShowMenuNavbar(!showMenuNavbar)}
-              >
-                {showMenuNavbar ? (
-                  <i
-                    className={cx(
-                      "fa-solid fa-xmark",
-                      showMenuNavbar ? "text-gray-500" : "text-white"
-                    )}
-                  />
-                ) : (
-                  <i
-                    className={cx(
-                      "fa-solid fa-bars",
-                      showMenuNavbar ? "text-gray-500" : "text-white"
-                    )}
-                  />
-                )}
-              </button>
+                  {item.name}
+                </a>
+              ))}
             </div>
           </div>
-        </div>
-        {/* Menu */}
-        <div>
-          <div
-            className={cx(
-              "flex-1 justify-self-center pb-3 mt-8 md:h-full md:opacity-100 md:pb-0 md:mt-0 transition-all duration-500 ease-out",
-              showMenuNavbar
-                ? "h-full opacity-100"
-                : "h-0 opacity-0 overflow-hidden"
-            )}
-          >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {menu.map(({ name, url }, index) => (
-                <li key={index}>
-                  <Link href={url}>{name}</Link>
-                </li>
-              ))}
-            </ul>
+          <div className="flex mr-2 md:hidden">
+            <button
+              onClick={() => setShowMenuNavbar(!showMenuNavbar)}
+              className="text-gray-500 transition duration-300 focus:outline-none hover:text-black"
+            >
+              {showMenuNavbar ? (
+                <i className={cx("fa-solid fa-xmark", fontColor)} />
+              ) : (
+                <i className={cx("fa-solid fa-bars", fontColor)} />
+              )}
+            </button>
           </div>
+        </div>
+      </div>
+      {/* Mobile menu */}
+      <div
+        className={cx(
+          "transition-all duration-500 ease-out md:hidden",
+          showMenuNavbar
+            ? "h-auto opacity-100"
+            : "h-0 opacity-0 overflow-hidden"
+        )}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {menu.map((item) => (
+            <a
+              key={item.name}
+              href={item.url}
+              className="text-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
