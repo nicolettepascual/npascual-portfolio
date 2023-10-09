@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
+        handwriting: ["var(--font-handwriting)"],
+      },
       colors: {
         "main-blue": "#699ABC",
         "powder-blue": "#A1B9CC",

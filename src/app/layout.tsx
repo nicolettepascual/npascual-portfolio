@@ -1,8 +1,18 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto, Just_Another_Hand } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-roboto",
+});
+
+const justAnotherHand = Just_Another_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-handwriting",
+});
 
 export const metadata: Metadata = {
   title: "Nicolette Pascual",
@@ -22,7 +32,9 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable} ${justAnotherHand.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

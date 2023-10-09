@@ -52,7 +52,7 @@ const Navbar = () => {
             >
               <span
                 className={cx(
-                  "cursor-pointer font-semibold text-lg",
+                  "cursor-pointer font-semibold font-handwriting text-2xl",
                   fontColor
                 )}
               >
