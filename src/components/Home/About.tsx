@@ -1,8 +1,13 @@
+import { SECTIONS, navbarData } from "@/config/config";
+
 const About = () => {
   return (
-    <div className="max-w-4xl mx-auto my-16">
+    <div
+      id={navbarData.links[SECTIONS.ABOUT].id}
+      className="max-w-4xl mx-auto my-16 px-4"
+    >
       <p className="text-2xl md:text-4xl font-bold text-center">About Me</p>
-      <p className="text-base text-left md:text-center text-gray-600 leading-relaxed mt-4">
+      <p className="text-base text-left md:text-center text-gray-600 leading-relaxed mt-4 px-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut suscipit
         ex. Aenean quis felis id quam convallis suscipit eget vitae diam. Fusce
         dui ante, fringilla at viverra id, tristique at diam. Fusce in orci

@@ -1,21 +1,19 @@
 "use client";
 import { useState, useEffect } from "react";
 import cx from "classnames";
+import style from "@/css/Home.module.css";
+import { SECTIONS, navbarData } from "@/config/config";
 
 const Navbar = () => {
   const [showMenuNavbar, setShowMenuNavbar] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-  const menu = [
-    { name: "About", url: "/" },
-    { name: "Projects", url: "/" },
-    { name: "Skills", url: "/" },
-    { name: "Experience", url: "/" },
-    { name: "Contact", url: "/" },
-  ];
-
   const fontColor =
     isScrolled || showMenuNavbar ? "text-gray-500" : "text-white";
+
+  const linkList = Object.keys(navbarData.links).map(
+    (key) => navbarData.links[key as SECTIONS]
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -27,32 +25,52 @@ const Navbar = () => {
     };
   }, []);
 
+  const smoothScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <nav
       className={cx(
         "fixed w-full transition-all duration-300 top-0 z-50 ",
-        (isScrolled || showMenuNavbar) && "bg-white shadow-lg",
-        !isScrolled && !showMenuNavbar && "bg-transparent"
+        (isScrolled || showMenuNavbar) && cx(style.scrolledNavbar, "shadow-lg"),
+        !isScrolled && !showMenuNavbar && style.navbar
       )}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="w-full flex items-center justify-between">
-            <div className="flex-shrink-0">
-              <span className={cx("font-semibold text-lg", fontColor)}>NP</span>
+            <div
+              className="flex-shrink-0"
+              onClick={() => smoothScrollTo("top")}
+            >
+              <span
+                className={cx(
+                  "cursor-pointer font-semibold text-lg",
+                  fontColor
+                )}
+              >
+                {navbarData.name}
+              </span>
             </div>
             <div className="hidden md:block ml-10 space-x-4">
-              {menu.map((item) => (
-                <a
+              {linkList.map((item) => (
+                <span
                   key={item.name}
-                  href={item.url}
                   className={cx(
-                    "hover:text-black transition duration-300",
+                    "cursor-pointer hover:text-black transition duration-300",
                     fontColor
                   )}
+                  onClick={() => smoothScrollTo(item.id)}
                 >
                   {item.name}
-                </a>
+                </span>
               ))}
             </div>
           </div>
@@ -80,14 +98,14 @@ const Navbar = () => {
         )}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {menu.map((item) => (
-            <a
+          {linkList.map((item) => (
+            <span
               key={item.name}
-              href={item.url}
-              className="text-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+              className="cursor-pointer text-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => smoothScrollTo(item.id)}
             >
               {item.name}
-            </a>
+            </span>
           ))}
         </div>
       </div>
