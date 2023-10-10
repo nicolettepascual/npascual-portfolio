@@ -30,7 +30,7 @@ export const landingContentData = {
 export const aboutSectionData = {
   title: "About Me",
   content:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut suscipit ex. Aenean quis felis id quam convallis suscipit eget vitae diam. Fusce dui ante, fringilla at viverra id, tristique at diam. Fusce in orci In congue Etiam quis lorem in erat suscipit gravida sed mollis lorem. Etiam iaculis et lectus ut venenatis.",
+    "I'm Nicolette, a front-end developer with a passion for learning. My career began as a mobile app developer, and I eventually moved into web development. Learning new things that spark my interest is always on my to-do list.",
   imageUrl: "portfolio/self-01",
   imageText: "Hello :)",
 };
