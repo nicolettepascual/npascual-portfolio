@@ -34,3 +34,9 @@ export const aboutSectionData = {
   imageUrl: "portfolio/self-01",
   imageText: "Hello :)",
 };
+
+export const projectsSectionData = {
+  title: "Projects",
+  imageUrl: "cld-sample-5",
+  imageText: "Hello :)",
+};

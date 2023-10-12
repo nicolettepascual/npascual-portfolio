@@ -2,7 +2,7 @@
 import { SECTIONS, aboutSectionData, navbarData } from "@/config/config";
 import SectionTitle from "../typography/SectionTitle";
 import SectionContent from "../typography/SectionContent";
-import PolaroidCard from "../About/Polaroid";
+import PolaroidCard from "../About/PolaroidCard";
 
 const About = () => {
   const { content, imageText, imageUrl, title } = aboutSectionData;
