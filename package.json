@@ -11,6 +11,7 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
+    "@material-tailwind/react": "^2.1.2",
     "classnames": "^2.3.2",
     "cloudinary": "^1.41.0",
     "encoding": "^0.1.13",

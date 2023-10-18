@@ -1,55 +1,65 @@
 "use client";
-import { useRef } from "react";
 import cx from "classnames";
 import { CldImage } from "next-cloudinary";
 import FadeInSection from "../General/FadeInSection";
 import style from "./PolaroidCard.module.css";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
 
 interface PolaroidCardProps {
+  customDivClass?: string;
+  customCardClass?: string;
   imageUrl: string;
   onClick?: () => void;
   text?: string;
 }
 
 const PolaroidCard = (props: PolaroidCardProps) => {
-  const { imageUrl, onClick, text } = props;
-  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const { customDivClass, customCardClass, imageUrl, onClick, text } = props;
 
   return (
     <div
-      className={`${onClick && "cursor-pointer"}`}
+      className={cx(
+        onClick && "cursor-pointer",
+        customDivClass && customDivClass
+      )}
       onClick={() => {
         if (onClick) onClick();
       }}
     >
       <FadeInSection>
-        <div className="flex">
-          <div
-            ref={aboutRef}
-            className={cx(
-              "flex flex-col justify-center max-w-xs mx-auto bg-white shadow-xl p-5",
-              style.polaroid
-            )}
-          >
-            <div className="w-full h-auto">
-              <CldImage
-                alt="image"
-                height="600"
-                loading="lazy"
-                priority={false}
-                src={imageUrl}
-                width="600"
-              />
-            </div>
-            <div className="text-center mt-5">
-              {text && (
-                <p className="text-xl sm:text-2xl font-semibold font-handwriting text-gray-900">
-                  {text}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
+        <Card
+          className={cx(
+            "rounded w-full",
+            style.polaroid,
+            customCardClass && customCardClass
+          )}
+        >
+          <CardHeader className="h-80 rounded" floated={false} shadow>
+            <CldImage
+              className="h-full object-center object-cover w-full"
+              alt="image"
+              height={600}
+              loading="lazy"
+              priority={false}
+              src={imageUrl}
+              width={600}
+            />
+          </CardHeader>
+          <CardBody className="text-center">
+            <Typography
+              variant="h4"
+              color="blue-gray"
+              className="font-handwriting font-normal mb-2 text-gray-900 text-3xl"
+            >
+              {text}
+            </Typography>
+          </CardBody>
+        </Card>
       </FadeInSection>
     </div>
   );

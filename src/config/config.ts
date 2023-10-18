@@ -1,6 +1,6 @@
 export enum SECTIONS {
   ABOUT = "ABOUT",
-  PROJECTS = "PROJECTS",
+  WORKS = "WORKS",
   SKILLS = "SKILLS",
   EXPERIENCE = "EXPERIENCE",
   CONTACT = "CONTACT",
@@ -15,7 +15,7 @@ export const navbarData: NavbarData = {
   name: "NP",
   links: {
     [SECTIONS.ABOUT]: { name: "About", id: "about" },
-    [SECTIONS.PROJECTS]: { name: "Projects", id: "projects" },
+    [SECTIONS.WORKS]: { name: "Works", id: "works" },
     [SECTIONS.SKILLS]: { name: "Skills", id: "skills" },
     [SECTIONS.EXPERIENCE]: { name: "Experience", id: "experience" },
     [SECTIONS.CONTACT]: { name: "Contact", id: "contact" },
@@ -36,7 +36,31 @@ export const aboutSectionData = {
 };
 
 export const projectsSectionData = {
-  title: "Projects",
-  imageUrl: "cld-sample-5",
-  imageText: "Hello :)",
+  title: "Works",
+  projects: [
+    {
+      thumbnail: "portfolio/proj/sh",
+      title: "Silent Hill: Ascension",
+      carouselImgList: ["portfolio/proj/sh"],
+    },
+    {
+      thumbnail: "portfolio/proj/twd",
+      title: "The Walking Dead: Last Mile",
+      carouselImgList: ["portfolio/proj/twd-1", "portfolio/proj/twd-2"],
+    },
+    {
+      thumbnail: "portfolio/proj/dyn",
+      title: "Projects for Dynameyes, Inc.",
+      carouselImgList: ["portfolio/proj/dyn"],
+    },
+    {
+      thumbnail: "portfolio/proj/lfsa",
+      title: "Lasallian Food Square App",
+      carouselImgList: [
+        "portfolio/proj/lfsa-1",
+        "portfolio/proj/lfsa-2",
+        "portfolio/proj/lfsa-3",
+      ],
+    },
+  ],
 };

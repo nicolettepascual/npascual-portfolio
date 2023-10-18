@@ -1,13 +1,13 @@
 import LandingContainer from "@/components/Home/LandingContainer";
-import About from "@/components/Home/About";
-import Projects from "@/components/Projects/Projects";
+import About from "@/components/About/About";
+import Works from "@/components/Works/Works";
 
 export default function Home() {
   return (
     <>
       <LandingContainer />
       <About />
-      <Projects />
+      <Works />
     </>
   );
 }
