@@ -23,6 +23,6 @@ const config: Config = withMT({
       },
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 });
 export default config;

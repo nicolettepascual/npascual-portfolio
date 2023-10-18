@@ -12,7 +12,7 @@ const Navbar = () => {
     isScrolled || showMenuNavbar ? "text-gray-500" : "text-white";
 
   const linkList = Object.keys(navbarData.links).map(
-    (key) => navbarData.links[key as SECTIONS]
+    (key) => navbarData.links[key as SECTIONS],
   );
 
   useEffect(() => {
@@ -38,34 +38,34 @@ const Navbar = () => {
   return (
     <nav
       className={cx(
-        "fixed w-full transition-all duration-300 top-0 z-50 ",
+        "fixed top-0 z-50 w-full transition-all duration-300 ",
         (isScrolled || showMenuNavbar) && cx(style.scrolledNavbar, "shadow-lg"),
-        !isScrolled && !showMenuNavbar && style.navbar
+        !isScrolled && !showMenuNavbar && style.navbar,
       )}
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
-          <div className="w-full flex items-center justify-between">
+          <div className="flex w-full items-center justify-between">
             <div
               className="flex-shrink-0"
               onClick={() => smoothScrollTo("top")}
             >
               <span
                 className={cx(
-                  "cursor-pointer font-semibold font-handwriting text-2xl",
-                  fontColor
+                  "cursor-pointer font-handwriting text-2xl font-semibold",
+                  fontColor,
                 )}
               >
                 {navbarData.name}
               </span>
             </div>
-            <div className="hidden md:block ml-10 space-x-4">
+            <div className="ml-10 hidden space-x-4 md:block">
               {linkList.map((item) => (
                 <span
                   key={item.name}
                   className={cx(
-                    "cursor-pointer hover:text-black transition duration-300",
-                    fontColor
+                    "cursor-pointer transition duration-300 hover:text-black",
+                    fontColor,
                   )}
                   onClick={() => smoothScrollTo(item.id)}
                 >
@@ -74,10 +74,10 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <div className="flex mr-2 md:hidden">
+          <div className="mr-2 flex md:hidden">
             <button
               onClick={() => setShowMenuNavbar(!showMenuNavbar)}
-              className="text-gray-500 transition duration-300 focus:outline-none hover:text-black"
+              className="text-gray-500 transition duration-300 hover:text-black focus:outline-none"
             >
               {showMenuNavbar ? (
                 <i className={cx("fa-solid fa-xmark", fontColor)} />
@@ -94,14 +94,14 @@ const Navbar = () => {
           "transition-all duration-500 ease-out md:hidden",
           showMenuNavbar
             ? "h-auto opacity-100"
-            : "h-0 opacity-0 overflow-hidden"
+            : "h-0 overflow-hidden opacity-0",
         )}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           {linkList.map((item) => (
             <span
               key={item.name}
-              className="cursor-pointer text-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
+              className="block cursor-pointer rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:text-black"
               onClick={() => smoothScrollTo(item.id)}
             >
               {item.name}

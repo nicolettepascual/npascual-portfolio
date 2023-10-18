@@ -20,11 +20,11 @@ const Works = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.WORKS].id}
-      className="bg-main-blue flex flex-col w-full mx-auto my-16 px-4 pb-8 items-center md:pb-0 md:flex-row md:justify-center"
+      className="mx-auto my-16 flex w-full flex-col items-center bg-main-blue px-4 pb-8 md:flex-row md:justify-center md:pb-0"
     >
       <div className="mt-8 md:m-16">
         <SectionTitle text={title} />
-        <div className="flex flex-col w-full md:flex-row md:justify-center">
+        <div className="flex w-full flex-col md:flex-row md:justify-center">
           {projects.map((project, index) => (
             <PolaroidCard
               key={`${project}_${index}`}

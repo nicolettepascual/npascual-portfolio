@@ -14,7 +14,7 @@ const MaterialCarousel = (props: MaterialCarouselProps) => {
       {images.map((image, index) => (
         <CldImage
           key={`${image}_${index}`}
-          className={cx("object-contain w-full min-h-96", style.carouselImage)}
+          className={cx("min-h-96 w-full object-contain", style.carouselImage)}
           alt={`${image}_${index}`}
           height={600}
           loading="lazy"

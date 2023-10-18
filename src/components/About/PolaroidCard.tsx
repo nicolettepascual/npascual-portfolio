@@ -25,7 +25,7 @@ const PolaroidCard = (props: PolaroidCardProps) => {
     <div
       className={cx(
         onClick && "cursor-pointer",
-        customDivClass && customDivClass
+        customDivClass && customDivClass,
       )}
       onClick={() => {
         if (onClick) onClick();
@@ -34,14 +34,14 @@ const PolaroidCard = (props: PolaroidCardProps) => {
       <FadeInSection>
         <Card
           className={cx(
-            "rounded w-full",
+            "w-full rounded",
             style.polaroid,
-            customCardClass && customCardClass
+            customCardClass && customCardClass,
           )}
         >
           <CardHeader className="h-80 rounded" floated={false} shadow>
             <CldImage
-              className="h-full object-center object-cover w-full"
+              className="h-full w-full object-cover object-center"
               alt="image"
               height={600}
               loading="lazy"
@@ -54,7 +54,7 @@ const PolaroidCard = (props: PolaroidCardProps) => {
             <Typography
               variant="h4"
               color="blue-gray"
-              className="font-handwriting font-normal mb-2 text-gray-900 text-3xl"
+              className="mb-2 font-handwriting text-3xl font-normal text-gray-900"
             >
               {text}
             </Typography>

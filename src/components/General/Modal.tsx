@@ -23,18 +23,18 @@ const Modal = (props: ModalProps) => {
       open={show}
       size={"lg"}
     >
-      <DialogHeader className="justify-between md:text-2xl md:px-4 p-2 text-xl">
+      <DialogHeader className="justify-between p-2 text-xl md:px-4 md:text-2xl">
         <>
           <div>{title}</div>
           <div
             className="cursor-pointer"
             onClick={() => setShow((prev) => !prev)}
           >
-            <i className={"cursor-pointer fa-solid fa-xmark"} />
+            <i className={"fa-solid fa-xmark cursor-pointer"} />
           </div>
         </>
       </DialogHeader>
-      <DialogBody className="md:px-4 p-2">{children}</DialogBody>
+      <DialogBody className="p-2 md:px-4">{children}</DialogBody>
       {/* <DialogFooter>
         <Button
           variant="text"

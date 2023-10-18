@@ -7,8 +7,8 @@ const LandingContainer = () => (
   <div
     id="top"
     className={cx(
-      "min-h-screen flex flex-col items-center",
-      styles.backgroundGradient
+      "flex min-h-screen flex-col items-center",
+      styles.backgroundGradient,
     )}
   >
     <Navbar />

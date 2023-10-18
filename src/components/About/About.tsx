@@ -10,10 +10,10 @@ const About = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.ABOUT].id}
-      className="flex flex-col w-full mx-auto my-16 px-4 items-center md:flex-row md:justify-center"
+      className="mx-auto my-16 flex w-full flex-col items-center px-4 md:flex-row md:justify-center"
     >
       <PolaroidCard imageUrl={imageUrl} text={imageText} />
-      <div className="max-w-2xl mt-8 md:m-16">
+      <div className="mt-8 max-w-2xl md:m-16">
         <SectionTitle text={title} />
         <SectionContent text={content} />
       </div>
