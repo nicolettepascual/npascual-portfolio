@@ -24,15 +24,16 @@ const Works = () => {
     >
       <div className="mt-8 md:m-16">
         <SectionTitle text={title} />
-        <div className="flex w-full flex-col md:flex-row md:justify-center">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
           {projects.map((project, index) => (
             <PolaroidCard
               key={`${project}_${index}`}
-              customDivClass="mx-2 my-2 md:my-0"
+              customDivClass="my-2 md:my-0 duration-500 hover:scale-105 hover:shadow-xl"
               customCardClass="w-80"
               imageUrl={project.thumbnail}
               onClick={() => viewProject(project as unknown as Project)}
-              text={project.title}
+              title={project.title}
+              subtitle={project.subtitle}
             />
           ))}
         </div>

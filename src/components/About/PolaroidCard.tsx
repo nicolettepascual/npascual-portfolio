@@ -15,11 +15,19 @@ interface PolaroidCardProps {
   customCardClass?: string;
   imageUrl: string;
   onClick?: () => void;
-  text?: string;
+  title?: string;
+  subtitle?: string;
 }
 
 const PolaroidCard = (props: PolaroidCardProps) => {
-  const { customDivClass, customCardClass, imageUrl, onClick, text } = props;
+  const {
+    customDivClass,
+    customCardClass,
+    imageUrl,
+    onClick,
+    title,
+    subtitle,
+  } = props;
 
   return (
     <div
@@ -51,13 +59,24 @@ const PolaroidCard = (props: PolaroidCardProps) => {
             />
           </CardHeader>
           <CardBody className="text-center">
-            <Typography
-              variant="h4"
-              color="blue-gray"
-              className="mb-2 font-handwriting text-3xl font-normal text-gray-900"
-            >
-              {text}
-            </Typography>
+            {title && (
+              <Typography
+                variant="h2"
+                color="blue-gray"
+                className="mb-2 font-handwriting font-normal text-gray-900"
+              >
+                {title}
+              </Typography>
+            )}
+            {subtitle && (
+              <Typography
+                variant="h4"
+                color="blue-gray"
+                className="mb-2 text-sm leading-none text-gray-900 md:font-thin"
+              >
+                {subtitle}
+              </Typography>
+            )}
           </CardBody>
         </Card>
       </FadeInSection>

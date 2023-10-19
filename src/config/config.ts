@@ -37,25 +37,33 @@ export const aboutSectionData = {
 
 export const projectsSectionData = {
   title: "Works",
+  modalLinks: "",
   projects: [
     {
       thumbnail: "portfolio/proj/sh",
       title: "Silent Hill: Ascension",
+      subtitle:
+        "A massively interactive live event (MILE) in which the worldwide audience determines the course of the story",
       carouselImgList: ["portfolio/proj/sh"],
     },
     {
       thumbnail: "portfolio/proj/twd",
       title: "The Walking Dead: Last Mile",
+      subtitle:
+        "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive",
       carouselImgList: ["portfolio/proj/twd-1", "portfolio/proj/twd-2"],
     },
     {
       thumbnail: "portfolio/proj/dyn",
       title: "Projects for Dynameyes, Inc.",
+      subtitle:
+        "Developed and published several apps/sites while working for this Fintech company",
       carouselImgList: ["portfolio/proj/dyn"],
     },
     {
       thumbnail: "portfolio/proj/lfsa",
       title: "Lasallian Food Square App",
+      subtitle: "An online food reservation app for DLSU-D Food Square",
       carouselImgList: [
         "portfolio/proj/lfsa-1",
         "portfolio/proj/lfsa-2",

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import cx from "classnames";
 import style from "./FadeInSection.module.css";
 
 const FadeInSection = ({ children }: { children: React.ReactNode }) => {
@@ -25,7 +26,11 @@ const FadeInSection = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`${style.fadeInSection} ${isVisible ? style.isVisible : ""}`}
+      className={cx(
+        "flex min-h-full flex-grow",
+        style.fadeInSection,
+        isVisible && style.isVisible,
+      )}
       ref={divRef}
     >
       {children}
