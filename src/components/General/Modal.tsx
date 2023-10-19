@@ -1,16 +1,22 @@
 "use client";
-import { Dialog, DialogBody, DialogHeader } from "@material-tailwind/react";
+import {
+  Dialog,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+} from "@material-tailwind/react";
 import { SetStateAction } from "react";
 
 interface ModalProps {
   children: React.ReactNode;
+  footerContent?: React.ReactNode;
   show: boolean;
   setShow: React.Dispatch<SetStateAction<boolean>>;
   title?: string;
 }
 
 const Modal = (props: ModalProps) => {
-  const { children, show, setShow, title } = props;
+  const { children, footerContent, show, setShow, title } = props;
 
   return (
     <Dialog
@@ -35,23 +41,9 @@ const Modal = (props: ModalProps) => {
         </>
       </DialogHeader>
       <DialogBody className="p-2 md:px-4">{children}</DialogBody>
-      {/* <DialogFooter>
-        <Button
-          variant="text"
-          color="red"
-          onClick={() => handleOpen(null)}
-          className="mr-1"
-        >
-          <span>Cancel</span>
-        </Button>
-        <Button
-          variant="gradient"
-          color="green"
-          onClick={() => handleOpen(null)}
-        >
-          <span>Confirm</span>
-        </Button>
-      </DialogFooter> */}
+      {footerContent && (
+        <DialogFooter className="justify-between">{footerContent}</DialogFooter>
+      )}
     </Dialog>
   );
 };

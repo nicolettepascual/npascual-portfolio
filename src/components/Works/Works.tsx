@@ -1,11 +1,14 @@
 "use client";
 import { useState } from "react";
 import { SECTIONS, projectsSectionData, navbarData } from "@/config/config";
-import { Project } from "@/types/types";
+import { LINK_TYPE, Project } from "@/types/types";
 import SectionTitle from "../typography/SectionTitle";
 import PolaroidCard from "../About/PolaroidCard";
 import Modal from "../General/Modal";
 import MaterialCarousel from "../General/MaterialCarousel";
+import { Chip, IconButton } from "@material-tailwind/react";
+import { LinkTypeColorData, TagColorData } from "@/config/constants";
+import { colors } from "@material-tailwind/react/types/generic";
 
 const Works = () => {
   const { title, projects } = projectsSectionData;
@@ -39,6 +42,44 @@ const Works = () => {
         </div>
       </div>
       <Modal
+        footerContent={
+          <>
+            <div className="sm:flex-no-wrap flex flex-wrap gap-1">
+              {selectedProject?.tags.map((tagName, index) => (
+                <Chip
+                  key={`${tagName}_${index}`}
+                  color={TagColorData[tagName] as colors}
+                  value={tagName}
+                />
+              ))}
+            </div>
+            <div className="mt-1 flex gap-1 md:mt-0">
+              {selectedProject?.links.map((link, index) => {
+                const btnColor = LinkTypeColorData[link.type];
+                let iconType = "solid";
+                if (
+                  link.type === LINK_TYPE.GITHUB ||
+                  link.type === LINK_TYPE.YOUTUBE
+                )
+                  iconType = "brands";
+                return (
+                  <a
+                    key={`${link}_${index}`}
+                    href={`${link.url}`}
+                    target="_blank"
+                  >
+                    <IconButton
+                      color={btnColor as colors}
+                      className={`rounded `}
+                    >
+                      <i className={`fa-${iconType} fa-${link.type} text-lg`} />
+                    </IconButton>
+                  </a>
+                );
+              })}
+            </div>
+          </>
+        }
         setShow={setShowModal}
         show={showModal}
         title={selectedProject?.title}

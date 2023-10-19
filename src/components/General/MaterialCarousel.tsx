@@ -31,7 +31,7 @@ const MaterialCarousel = (props: MaterialCarouselProps) => {
       }}
       nextArrow={({ loop, handleNext, lastIndex }) => (
         <CarouselButton
-          direction={"left"}
+          direction={"right"}
           disabled={!loop && lastIndex}
           onClick={handleNext}
           singleItemCarousel={images.length === 1}
@@ -39,7 +39,7 @@ const MaterialCarousel = (props: MaterialCarouselProps) => {
       )}
       prevArrow={({ loop, handlePrev, firstIndex }) => (
         <CarouselButton
-          direction={"right"}
+          direction={"left"}
           disabled={!loop && firstIndex}
           onClick={handlePrev}
           singleItemCarousel={images.length === 1}
