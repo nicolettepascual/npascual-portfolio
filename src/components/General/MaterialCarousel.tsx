@@ -6,10 +6,23 @@ import CarouselButton from "./CarouselButton";
 
 interface MaterialCarouselProps {
   images: string[];
+  overlayContent?: React.ReactNode;
 }
 
+const CarouselImage = ({ image }: { image: string }) => (
+  <CldImage
+    className={cx("min-h-96 w-full object-contain", style.carouselImage)}
+    alt={image}
+    height={600}
+    loading="lazy"
+    priority={false}
+    src={image}
+    width={600}
+  />
+);
+
 const MaterialCarousel = (props: MaterialCarouselProps) => {
-  const { images } = props;
+  const { images, overlayContent } = props;
   return (
     <Carousel
       className="rounded-xl"
@@ -46,18 +59,22 @@ const MaterialCarousel = (props: MaterialCarouselProps) => {
         />
       )}
     >
-      {images.map((image, index) => (
-        <CldImage
-          key={`${image}_${index}`}
-          className={cx("min-h-96 w-full object-contain", style.carouselImage)}
-          alt={`${image}_${index}`}
-          height={600}
-          loading="lazy"
-          priority={false}
-          src={image}
-          width={600}
-        />
-      ))}
+      {overlayContent ? (
+        <div className="relative w-full">
+          {images.map((image, index) => (
+            <CarouselImage key={`${image}_${index}`} image={image} />
+          ))}
+          {overlayContent && (
+            <div className="absolute inset-0 grid w-full place-items-center bg-black/75">
+              {overlayContent}
+            </div>
+          )}
+        </div>
+      ) : (
+        images.map((image, index) => (
+          <CarouselImage key={`${image}_${index}`} image={image} />
+        ))
+      )}
     </Carousel>
   );
 };

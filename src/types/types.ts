@@ -6,6 +6,12 @@ export interface Link {
 export interface Project {
   thumbnail: string;
   title: string;
+  overlay?: {
+    title: string;
+    content: string;
+    btnTitle: string;
+    btnLink: string;
+  };
   carouselImgList: string[];
   tags: TAGS[];
   links: Link[];
@@ -30,4 +36,5 @@ export enum LINK_TYPE {
   SECONDARY_WEBSITE = "link",
   YOUTUBE = "youtube",
   GITHUB = "github",
+  FACEBOOK = "facebook",
 }

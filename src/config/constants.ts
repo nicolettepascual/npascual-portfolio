@@ -19,4 +19,5 @@ export const LinkTypeColorData: Record<LINK_TYPE, string> = {
   [LINK_TYPE.SECONDARY_WEBSITE]: "blue",
   [LINK_TYPE.YOUTUBE]: "red",
   [LINK_TYPE.GITHUB]: "undefined",
+  [LINK_TYPE.FACEBOOK]: "blue",
 };

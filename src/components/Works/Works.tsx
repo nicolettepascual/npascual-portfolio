@@ -9,6 +9,7 @@ import MaterialCarousel from "../General/MaterialCarousel";
 import { Chip, IconButton } from "@material-tailwind/react";
 import { LinkTypeColorData, TagColorData } from "@/config/constants";
 import { colors } from "@material-tailwind/react/types/generic";
+import { Button, Typography } from "@material-tailwind/react";
 
 const Works = () => {
   const { title, projects } = projectsSectionData;
@@ -59,7 +60,8 @@ const Works = () => {
                 let iconType = "solid";
                 if (
                   link.type === LINK_TYPE.GITHUB ||
-                  link.type === LINK_TYPE.YOUTUBE
+                  link.type === LINK_TYPE.YOUTUBE ||
+                  link.type === LINK_TYPE.FACEBOOK
                 )
                   iconType = "brands";
                 return (
@@ -86,7 +88,52 @@ const Works = () => {
       >
         {selectedProject?.carouselImgList &&
         selectedProject?.carouselImgList.length > 0 ? (
-          <MaterialCarousel images={selectedProject?.carouselImgList} />
+          <MaterialCarousel
+            images={selectedProject?.carouselImgList}
+            overlayContent={
+              selectedProject?.overlay ? (
+                <div className="w-4/5 text-center md:w-2/4">
+                  {selectedProject?.overlay.title && (
+                    <Typography
+                      variant="h1"
+                      color="white"
+                      className="mb-2 text-lg md:mb-4 md:text-2xl lg:text-5xl"
+                    >
+                      {selectedProject?.overlay.title}
+                    </Typography>
+                  )}
+                  {selectedProject?.overlay.content && (
+                    <Typography
+                      variant="lead"
+                      color="white"
+                      className="mb-2 text-sm opacity-80 md:mb-12 md:text-lg"
+                    >
+                      {selectedProject?.overlay.content.includes("\\n") &&
+                        selectedProject.overlay.content
+                          .split("\\n")
+                          .map((text) => (
+                            <div key={text} className="mt-2">
+                              {text}
+                            </div>
+                          ))}
+                    </Typography>
+                  )}
+                  {selectedProject?.overlay.btnLink && (
+                    <div className="flex justify-center gap-2">
+                      <a
+                        href={selectedProject?.overlay.btnLink}
+                        target="_blank"
+                      >
+                        <Button size="sm" color="white">
+                          {selectedProject?.overlay.btnTitle}
+                        </Button>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ) : null
+            }
+          />
         ) : (
           <p>No images available</p>
         )}

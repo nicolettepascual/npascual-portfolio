@@ -79,6 +79,10 @@ export const projectsSectionData = {
           type: LINK_TYPE.YOUTUBE,
           url: "https://www.youtube.com/watch?v=zhF2Sm4GUFI",
         },
+        {
+          type: LINK_TYPE.FACEBOOK,
+          url: "https://www.facebook.com/TheWalkingDeadLastMile/",
+        },
       ],
     },
     {
@@ -86,6 +90,13 @@ export const projectsSectionData = {
       title: "Projects for Dynameyes, Inc.",
       subtitle:
         "Developed and published several apps/sites while working for this Fintech company",
+      overlay: {
+        title: "Confidential Projects with Dynameyes, Inc.",
+        content:
+          "I've worked on a number of projects with Dynameyes, Inc. but as I have signed a non-disclosure contract with them, further details about these projects are confidential.\\n You could check out the company's portfolio to see some of my projects there!",
+        btnTitle: "Learn More",
+        btnLink: "https://dynameyes.com/portfolio/",
+      },
       carouselImgList: ["portfolio/proj/dyn"],
       tags: [
         TAGS.VUE,
@@ -106,7 +117,8 @@ export const projectsSectionData = {
     {
       thumbnail: "portfolio/proj/lfsa",
       title: "Lasallian Food Square App",
-      subtitle: "An online food reservation app for DLSU-D Food Square",
+      subtitle:
+        "An online food reservation app for DLSU-D Food Square, developed as a college thesis project",
       carouselImgList: [
         "portfolio/proj/lfsa-1",
         "portfolio/proj/lfsa-2",
