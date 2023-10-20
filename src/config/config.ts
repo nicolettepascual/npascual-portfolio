@@ -134,3 +134,33 @@ export const projectsSectionData = {
     },
   ],
 };
+
+export const skillsSectionData = {
+  title: "Skills",
+  skills: [
+    { iconId: "devicon:typescript", text: "TypeScript" },
+    { iconId: "logos:javascript", text: "JavaScript" },
+    { iconId: "logos:dart", text: "Dart" },
+    { iconId: "skill-icons:react-dark", text: "React" },
+    { iconId: "logos:vue", text: "Vue" },
+    { iconId: "vscode-icons:file-type-html", text: "HTML" },
+    { iconId: "vscode-icons:file-type-css", text: "CSS" },
+    { iconId: "skill-icons:sass", text: "Sass (Scss)" },
+    { iconId: "logos:graphql", text: "GraphQL" },
+    { iconId: "logos:flutter", text: "Flutter" },
+    { iconId: "devicon:react", text: "React Native" },
+    { iconId: "logos:firebase", text: "Firebase" },
+    { iconId: "devicon:git", text: "Git" },
+    { iconId: "logos:bitbucket", text: "BitBucket" },
+    { iconId: "bi:github", text: "GitHub" },
+    { iconId: "logos:visual-studio-code", text: "Visual Studio Code" },
+    { iconId: "devicon:androidstudio", text: "Android Studio" },
+    { iconId: "logos:jira", text: "JIRA" },
+    { iconId: "simple-icons:clickup", text: "ClickUp" },
+    { iconId: "logos:microsoft-teams", text: "Microsoft Teams" },
+    { iconId: "logos:notion-icon", text: "Notion" },
+    { iconId: "logos:slack-icon", text: "Slack" },
+    { iconId: "logos:figma", text: "Figma" },
+    { iconId: "logos:payload", text: "Payload CMS" },
+  ],
+};
