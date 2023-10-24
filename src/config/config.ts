@@ -164,3 +164,43 @@ export const skillsSectionData = {
     { iconId: "logos:payload", text: "Payload CMS" },
   ],
 };
+
+export const experienceSectionData = {
+  title: "Education and Experience",
+  workExperience: [
+    {
+      title: "Junior Web Application Developer",
+      year: "2022 - Present",
+      subtitle: "Streamline Studios",
+      description:
+        "Worked on multiple web game projects using React, Typescript, and Genvid Technology",
+    },
+    {
+      title: "Software Engineer",
+      year: "2020 - 2022",
+      subtitle: "Dynameyes, Inc.",
+      description:
+        "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Fluter framework for mobile apps",
+    },
+    {
+      title: "Web Developer Intern",
+      year: "2018",
+      subtitle: "Senate of the Phillpines",
+      description:
+        "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
+    },
+  ],
+  education: [
+    {
+      title: "Bachelor of Science in Computer Science",
+      year: "2015-2019",
+      subtitle: "De La Salle University - Dasmariñas",
+      listContent: [
+        "Deans Honor Lister (2016; 2017; 2018)",
+        "Computer Science and Information Technology Program Council Auditor",
+        "Gawad Agham Excellence in Leadership Award",
+        "Gawad Agham Runner-Up For Best Thesis in App Category",
+      ],
+    },
+  ],
+};

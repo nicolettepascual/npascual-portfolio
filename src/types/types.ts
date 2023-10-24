@@ -17,6 +17,14 @@ export interface Project {
   links: Link[];
 }
 
+export interface TimelineData {
+  title: string;
+  subtitle: string;
+  description?: string;
+  year: string;
+  listContent?: string[];
+}
+
 export enum TAGS {
   VS_CODE = "Visual Studio Code",
   ANDROID_STUDIO = "Android Studio",
