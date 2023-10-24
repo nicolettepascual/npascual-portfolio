@@ -204,3 +204,22 @@ export const experienceSectionData = {
     },
   ],
 };
+
+export const contactSection = {
+  title: "Let's get in touch!",
+  subtitle:
+    "I'm always interested to learn new things and connect. If you have an opportunity or just want to say hi, feel free to reach out!",
+  links: [
+    {
+      text: "Send an email",
+      icon: "fa-solid fa-envelope",
+      url: "mailto:nicolette.pascual@gmail.com",
+    },
+    {
+      text: "Connect via LinkedIn",
+      icon: "fa-brands fa-linkedin",
+      url: "https://www.linkedin.com/in/nicolettepascual/",
+      color: "blue",
+    },
+  ],
+};
