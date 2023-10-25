@@ -1,5 +1,4 @@
 import cx from "classnames";
-import Navbar from "@/components/Home/Navbar";
 import LandingContent from "@/components/Home/LandingContent";
 import styles from "@/css/Home.module.css";
 
@@ -11,7 +10,6 @@ const LandingContainer = () => (
       styles.backgroundGradient,
     )}
   >
-    <Navbar />
     <LandingContent />
   </div>
 );

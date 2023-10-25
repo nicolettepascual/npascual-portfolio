@@ -5,10 +5,12 @@ import Skills from "@/components/Skills/Skills";
 import Experience from "@/components/Experience/Experience";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Home/Navbar";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <LandingContainer />
       <About />
       <Works />
