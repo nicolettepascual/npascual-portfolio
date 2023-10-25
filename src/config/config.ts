@@ -1,5 +1,11 @@
 import { LINK_TYPE, TAGS } from "@/types/types";
 
+export const info = {
+  initials: "NP",
+  name: "Nicolette Pascual",
+  footerLink: "https://www.linkedin.com/in/nicolettepascual/",
+};
+
 export enum SECTIONS {
   ABOUT = "ABOUT",
   WORKS = "WORKS",
@@ -14,7 +20,7 @@ export interface NavbarData {
 }
 
 export const navbarData: NavbarData = {
-  name: "NP",
+  name: info.initials,
   links: {
     [SECTIONS.ABOUT]: { name: "About", id: "about" },
     [SECTIONS.WORKS]: { name: "Works", id: "works" },
@@ -25,7 +31,7 @@ export const navbarData: NavbarData = {
 };
 
 export const landingContentData = {
-  title: "Nicolette Pascual",
+  title: info.name,
   subtitle: "Front-End Developer / Web Developer from the Philippines",
 };
 
@@ -218,7 +224,7 @@ export const contactSection = {
     {
       text: "Connect via LinkedIn",
       icon: "fa-brands fa-linkedin",
-      url: "https://www.linkedin.com/in/nicolettepascual/",
+      url: info.footerLink,
       color: "blue",
     },
   ],
