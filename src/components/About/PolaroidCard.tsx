@@ -39,47 +39,45 @@ const PolaroidCard = (props: PolaroidCardProps) => {
         if (onClick) onClick();
       }}
     >
-      <FadeInSection>
-        <Card
-          className={cx(
-            "w-full rounded",
-            style.polaroid,
-            customCardClass && customCardClass,
+      <Card
+        className={cx(
+          "w-full rounded",
+          style.polaroid,
+          customCardClass && customCardClass,
+        )}
+      >
+        <CardHeader className="h-80 rounded" floated={false} shadow>
+          <CldImage
+            className="h-full w-full object-cover object-center"
+            alt="image"
+            height={600}
+            loading="lazy"
+            priority={false}
+            src={imageUrl}
+            width={600}
+          />
+        </CardHeader>
+        <CardBody className="text-center">
+          {title && (
+            <Typography
+              variant="h2"
+              color="blue-gray"
+              className="mb-2 font-handwriting font-normal text-gray-900"
+            >
+              {title}
+            </Typography>
           )}
-        >
-          <CardHeader className="h-80 rounded" floated={false} shadow>
-            <CldImage
-              className="h-full w-full object-cover object-center"
-              alt="image"
-              height={600}
-              loading="lazy"
-              priority={false}
-              src={imageUrl}
-              width={600}
-            />
-          </CardHeader>
-          <CardBody className="text-center">
-            {title && (
-              <Typography
-                variant="h2"
-                color="blue-gray"
-                className="mb-2 font-handwriting font-normal text-gray-900"
-              >
-                {title}
-              </Typography>
-            )}
-            {subtitle && (
-              <Typography
-                variant="h4"
-                color="blue-gray"
-                className="mb-2 text-sm leading-none text-gray-900 md:font-thin"
-              >
-                {subtitle}
-              </Typography>
-            )}
-          </CardBody>
-        </Card>
-      </FadeInSection>
+          {subtitle && (
+            <Typography
+              variant="h4"
+              color="blue-gray"
+              className="mb-2 text-sm leading-none text-gray-900 md:font-thin"
+            >
+              {subtitle}
+            </Typography>
+          )}
+        </CardBody>
+      </Card>
     </div>
   );
 };

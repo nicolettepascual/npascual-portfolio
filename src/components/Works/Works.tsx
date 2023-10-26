@@ -10,6 +10,7 @@ import { Chip, IconButton } from "@material-tailwind/react";
 import { LinkTypeColorData, TagColorData } from "@/config/constants";
 import { colors } from "@material-tailwind/react/types/generic";
 import { Button, Typography } from "@material-tailwind/react";
+import FadeInSection from "../General/FadeInSection";
 
 const Works = () => {
   const { title, projects } = projectsSectionData;
@@ -30,15 +31,19 @@ const Works = () => {
         <SectionTitle text={title} />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
           {projects.map((project, index) => (
-            <PolaroidCard
+            <FadeInSection
               key={`${project}_${index}`}
-              customDivClass="my-2 md:my-0 duration-500 hover:scale-105 hover:shadow-xl"
-              customCardClass="w-80"
-              imageUrl={project.thumbnail}
-              onClick={() => viewProject(project as unknown as Project)}
-              title={project.title}
-              subtitle={project.subtitle}
-            />
+              delay={(index + 1) * 200}
+            >
+              <PolaroidCard
+                customDivClass="my-2 md:my-0 duration-500 hover:scale-105 hover:shadow-xl"
+                customCardClass="w-80"
+                imageUrl={project.thumbnail}
+                onClick={() => viewProject(project as unknown as Project)}
+                title={project.title}
+                subtitle={project.subtitle}
+              />
+            </FadeInSection>
           ))}
         </div>
       </div>
