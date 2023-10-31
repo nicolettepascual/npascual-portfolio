@@ -32,7 +32,12 @@ export const navbarData: NavbarData = {
 
 export const landingContentData = {
   title: info.name,
-  subtitle: "Front-End Developer / Web Developer from the Philippines",
+  subtitles: [
+    "Front-End Developer / Web Developer",
+    '"Occasional" Mobile App Developer',
+    "Lifelong learner",
+    "Video Game Enthusiast",
+  ],
 };
 
 export const aboutSectionData = {
