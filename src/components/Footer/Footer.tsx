@@ -6,7 +6,7 @@ import { Typography } from "@material-tailwind/react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white md:p-8">
+    <footer className="w-full bg-white py-8 md:p-8">
       <hr className="my-2 border-blue-gray-50" />
       <div className="my-6 md:mb-0 md:mt-6">
         <div className="flex items-center justify-center">

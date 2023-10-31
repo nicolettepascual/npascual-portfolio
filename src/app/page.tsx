@@ -1,3 +1,4 @@
+"use client";
 import LandingContainer from "@/components/Home/LandingContainer";
 import About from "@/components/About/About";
 import Works from "@/components/Works/Works";

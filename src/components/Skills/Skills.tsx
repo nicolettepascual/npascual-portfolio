@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.SKILLS].id}
-      className="mx-auto my-16 flex w-full flex-col items-center px-4 md:flex-row md:justify-center"
+      className="mx-auto flex w-full flex-col items-center bg-white px-4 py-16 md:flex-row md:justify-center"
     >
       <div className="mt-8 max-w-2xl md:m-16">
         <SectionTitle text={title} />

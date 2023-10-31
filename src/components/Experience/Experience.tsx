@@ -22,7 +22,7 @@ const Experience = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.EXPERIENCE].id}
-      className="mx-auto my-16 flex w-full flex-col items-center bg-main-blue px-4 pb-8 md:flex-row md:justify-center md:pb-0"
+      className="mx-auto py-16 flex w-full flex-col items-center bg-main-blue px-4 pb-8 md:flex-row md:justify-center md:pb-0"
     >
       <div className="mt-8 md:m-16">
         <SectionTitle text={title} />

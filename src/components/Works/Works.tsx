@@ -25,7 +25,7 @@ const Works = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.WORKS].id}
-      className="mx-auto my-16 flex w-full flex-col items-center bg-main-blue px-4 pb-8 md:flex-row md:justify-center md:pb-0"
+      className="mx-auto flex w-full flex-col items-center bg-main-blue px-4 py-16 pb-8 md:flex-row md:justify-center md:pb-0"
     >
       <div className="mt-8 md:m-16">
         <SectionTitle text={title} />

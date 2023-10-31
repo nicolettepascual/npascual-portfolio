@@ -14,7 +14,10 @@
   -moz-animation: gradient-animation var(--gradient-duration) ease infinite;
   -o-animation: gradient-animation var(--gradient-duration) ease infinite;
   animation: gradient-animation var(--gradient-duration) ease infinite;
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
 }
 
 .navbar {

@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div
       id={navbarData.links[SECTIONS.ABOUT].id}
-      className="mx-auto my-16 flex w-full flex-col items-center px-4 md:flex-row md:justify-center"
+      className="mx-auto flex w-full flex-col items-center bg-white px-4 py-16 pb-8 md:flex-row md:justify-center md:pb-0"
     >
       <FadeInSection customClass="justify-center">
         <PolaroidCard imageUrl={imageUrl} title={imageText} />
