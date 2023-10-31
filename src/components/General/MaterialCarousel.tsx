@@ -33,7 +33,7 @@ const MaterialCarousel = (props: MaterialCarouselProps) => {
             {new Array(length).fill("").map((_, i) => (
               <span
                 key={i}
-                className={`block h-3 w-3 cursor-pointer rounded-full transition-colors content-[''] ${
+                className={`block h-3 w-3 cursor-pointer rounded-full transition-colors content-[''] focus:outline-none ${
                   activeIndex === i ? "bg-white" : "bg-white/50"
                 }`}
                 onClick={() => setActiveIndex(i)}

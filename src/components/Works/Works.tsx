@@ -1,16 +1,16 @@
 "use client";
 import { useState } from "react";
-import { SECTIONS, projectsSectionData, navbarData } from "@/config/config";
+import cx from "classnames";
+import { SECTIONS, projectsSectionData } from "@/config/config";
 import { LINK_TYPE, Project } from "@/types/types";
 import SectionTitle from "../typography/SectionTitle";
 import PolaroidCard from "../About/PolaroidCard";
 import Modal from "../General/Modal";
 import MaterialCarousel from "../General/MaterialCarousel";
 import { Chip, IconButton } from "@material-tailwind/react";
-import { LinkTypeColorData, TagColorData } from "@/config/constants";
-import { colors } from "@material-tailwind/react/types/generic";
 import { Button, Typography } from "@material-tailwind/react";
 import FadeInSection from "../General/FadeInSection";
+import SectionWrapper from "../General/SectionWrapper";
 
 const Works = () => {
   const { title, projects } = projectsSectionData;
@@ -23,11 +23,8 @@ const Works = () => {
   };
 
   return (
-    <div
-      id={navbarData.links[SECTIONS.WORKS].id}
-      className="mx-auto flex w-full flex-col items-center bg-main-blue px-4 py-16 pb-8 md:flex-row md:justify-center md:pb-0"
-    >
-      <div className="mt-8 md:m-16">
+    <>
+      <SectionWrapper section={SECTIONS.WORKS}>
         <SectionTitle text={title} />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
           {projects.map((project, index) => (
@@ -46,7 +43,7 @@ const Works = () => {
             </FadeInSection>
           ))}
         </div>
-      </div>
+      </SectionWrapper>
       <Modal
         footerContent={
           <>
@@ -54,14 +51,17 @@ const Works = () => {
               {selectedProject?.tags.map((tagName, index) => (
                 <Chip
                   key={`${tagName}_${index}`}
-                  color={TagColorData[tagName] as colors}
+                  className={cx(
+                    "font-handwriting text-2xl font-thin capitalize leading-none",
+                    index % 2 === 0 ? "bg-main-blue" : "bg-powder-blue",
+                  )}
+                  size="sm"
                   value={tagName}
                 />
               ))}
             </div>
             <div className="mt-1 flex gap-1 md:mt-0">
               {selectedProject?.links.map((link, index) => {
-                const btnColor = LinkTypeColorData[link.type];
                 let iconType = "solid";
                 if (
                   link.type === LINK_TYPE.GITHUB ||
@@ -76,8 +76,8 @@ const Works = () => {
                     target="_blank"
                   >
                     <IconButton
-                      color={btnColor as colors}
-                      className={`rounded `}
+                      className="rounded bg-main-blue hover:bg-powder-blue focus:outline-none"
+                      size="sm"
                     >
                       <i className={`fa-${iconType} fa-${link.type} text-lg`} />
                     </IconButton>
@@ -129,7 +129,11 @@ const Works = () => {
                         href={selectedProject?.overlay.btnLink}
                         target="_blank"
                       >
-                        <Button size="sm" color="white">
+                        <Button
+                          className="outline-none"
+                          size="sm"
+                          color="white"
+                        >
                           {selectedProject?.overlay.btnTitle}
                         </Button>
                       </a>
@@ -143,7 +147,7 @@ const Works = () => {
           <p>No images available</p>
         )}
       </Modal>
-    </div>
+    </>
   );
 };
 export default Works;

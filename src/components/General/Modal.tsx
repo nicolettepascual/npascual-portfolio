@@ -27,11 +27,13 @@ const Modal = (props: ModalProps) => {
       className="min-w-full"
       handler={() => setShow((prev) => !prev)}
       open={show}
-      size={"lg"}
+      size="lg"
     >
-      <DialogHeader className="justify-between p-2 text-xl md:px-4 md:text-2xl">
+      <DialogHeader className="justify-between p-2 text-xl md:px-4 md:pb-0 md:text-2xl">
         <>
-          <div>{title}</div>
+          <div className="font-handwriting text-5xl font-normal leading-none">
+            {title}
+          </div>
           <div
             className="cursor-pointer"
             onClick={() => setShow((prev) => !prev)}

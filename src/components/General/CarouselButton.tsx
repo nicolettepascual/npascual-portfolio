@@ -19,7 +19,7 @@ const CarouselButton = (props: CarouselButtonProps) => {
       size="lg"
       onClick={onClick}
       disabled={disabled}
-      className={`!absolute ${direction}-4 top-2/4 -translate-y-2/4 rounded-full bg-gray-900/10 text-white hover:bg-gray-900/20`}
+      className={`!absolute ${direction}-4 top-2/4 -translate-y-2/4 rounded-full bg-gray-900/10 text-white hover:bg-gray-900/20 focus:outline-none`}
     >
       <i className={`fa-solid fa-chevron-${direction} cursor-pointer`} />
     </IconButton>

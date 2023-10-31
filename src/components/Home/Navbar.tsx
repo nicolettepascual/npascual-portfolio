@@ -74,11 +74,11 @@ const Navbar = () => {
               {navbarData.name}
             </Link>
             <div className="ml-10 hidden space-x-4 md:block">
-              {linkList.map((item, index) => (
+              {linkList.map((item) => (
                 <NavbarLink
                   key={item.name}
                   item={item}
-                  offset={(index + 1) % 2 === 0 ? -65 : -128}
+                  offset={-65}
                   customClass="cursor-pointer transition duration-300 hover:text-black"
                 />
               ))}
