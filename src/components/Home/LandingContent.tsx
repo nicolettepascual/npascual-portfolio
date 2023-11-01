@@ -2,35 +2,8 @@
 import cx from "classnames";
 import { landingContentData } from "@/config/config";
 import styles from "@/css/Home.module.css";
-import { useEffect, useState } from "react";
 
 const LandingContent = () => {
-  const [subtitlesIndex, setSubtitlesIndex] = useState(0);
-  const [subtitlesAnimation, setSubtitlesAnimation] = useState({
-    transform: "translateY(0)",
-    transition: "none",
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSubtitlesIndex(
-        (subtitlesIndex + 1) % landingContentData.subtitles.length,
-      );
-      setSubtitlesAnimation({
-        transform: "translateY(-100vh)",
-        transition: "transform 1s ease-in-out",
-      });
-      setTimeout(() => {
-        setSubtitlesAnimation({
-          transform: "translateY(0)",
-          transition: "transform 1s ease-in-out",
-        });
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [subtitlesIndex]);
-
   return (
     <div className="flex flex-grow flex-col items-center justify-center px-4">
       <div className="mx-auto max-w-4xl text-white">
