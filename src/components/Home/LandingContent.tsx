@@ -1,7 +1,7 @@
 "use client";
 import cx from "classnames";
 import { landingContentData } from "@/config/config";
-import styles from "@/css/Home.module.css";
+import styles from "./LandingContainer.module.css";
 
 const LandingContent = () => {
   return (

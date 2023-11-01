@@ -1,6 +1,6 @@
 import cx from "classnames";
 import LandingContent from "@/components/Home/LandingContent";
-import styles from "@/css/Home.module.css";
+import styles from "./LandingContainer.module.css";
 
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";

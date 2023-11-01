@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import cx from "classnames";
-import style from "@/css/Home.module.css";
+import style from "./LandingContainer.module.css";
 import { SECTIONS, navbarData } from "@/config/config";
 import { Link } from "react-scroll";
 
