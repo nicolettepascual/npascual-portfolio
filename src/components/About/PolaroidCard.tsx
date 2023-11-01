@@ -1,7 +1,6 @@
 "use client";
 import cx from "classnames";
 import { CldImage } from "next-cloudinary";
-import FadeInSection from "../General/FadeInSection";
 import style from "./PolaroidCard.module.css";
 import {
   Card,
