@@ -2,14 +2,33 @@ import "tailwindcss/tailwind.css";
 import "@/styles/main.css";
 
 import { AppProps } from "next/app";
-import { Cloudinary } from "@cloudinary/url-gen";
+import { Roboto, Just_Another_Hand } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-roboto",
+});
+
+const justAnotherHand = Just_Another_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-handwriting",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: "dhxirx75d",
-    },
-  });
-
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <style jsx global>{`
+        :root {
+          --font-handwriting: ${justAnotherHand.style.fontFamily};
+        }
+      `}</style>
+      <main
+        className={`${roboto.variable} ${justAnotherHand.variable} font-sans`}
+      >
+        <Component {...pageProps} />
+      </main>
+    </>
+  );
 }
