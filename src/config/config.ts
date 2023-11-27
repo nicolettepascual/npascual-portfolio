@@ -3,6 +3,9 @@ import { LINK_TYPE, TAGS } from "@/types/types";
 export const info = {
   initials: "NP",
   name: "Nicolette Pascual",
+  title: "Front-End Developer | Web Developer",
+  metaContent:
+    "Front-end web and mobile app developer with experience in React and Flutter. Skilled front-end development with HTML, CSS, and TypeScript proficiency.",
   footerLink: "https://www.linkedin.com/in/nicolettepascual/",
 };
 
