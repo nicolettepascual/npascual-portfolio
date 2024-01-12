@@ -21,6 +21,13 @@ const config: Config = withMT({
         bone: "#D5D0C4",
         timberwolf: "#DCD6D6",
       },
+      screens: {
+        xxs: "280px",
+        sm: "640px",
+        md: "1024px",
+        lg: "1280px",
+        xl: "1920px",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],

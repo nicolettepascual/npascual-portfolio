@@ -14,7 +14,7 @@ const About = () => {
       <FadeInSection customClass="justify-center">
         <PolaroidCard imageUrl={imageUrl} title={imageText} />
       </FadeInSection>
-      <div className="my-8 max-w-2xl md:m-16">
+      <div className="m-8 flex max-w-lg flex-col justify-center">
         <SectionTitle text={title} />
         <SectionContent text={content} />
       </div>

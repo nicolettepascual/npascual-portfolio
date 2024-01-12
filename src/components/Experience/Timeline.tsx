@@ -27,15 +27,12 @@ const TimelineComponent = (props: TimelineProps) => {
   return (
     <Timeline className="mt-6 text-white md:mt-4">
       {timelineData.map((data, index) => (
-        <FadeInSection
-          key={`${data.title}_${index}`}
-          delay={(index + 1) * 200}
-        >
+        <FadeInSection key={`${data.title}_${index}`} delay={(index + 1) * 200}>
           <TimelineItem>
             <TimelineConnector className={style.timelineConnector} />
             <TimelineHeader className={cx("h-3", style.timelineConnector)}>
               <TimelineIcon />
-              <div className="font-handwriting text-3xl leading-[0.8] md:text-4xl">
+              <div className="font-handwriting text-3xl leading-[0.8]">
                 {data.title}
               </div>
               <div className="bg-tran ml-[-0.5rem] text-xs">{`(${data.year})`}</div>

@@ -26,7 +26,7 @@ const Works = () => {
     <>
       <SectionWrapper section={SECTIONS.WORKS}>
         <SectionTitle text={title} />
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <FadeInSection
               key={`${project}_${index}`}
