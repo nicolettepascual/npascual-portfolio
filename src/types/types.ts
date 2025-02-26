@@ -37,6 +37,8 @@ export enum TAGS {
   IOS = "iOS",
   FIREBASE = "Firebase",
   DART = "Dart",
+  CONSTRUCT3 = "Construct 3",
+  PLAYFAB = "PlayFab",
 }
 
 export enum LINK_TYPE {

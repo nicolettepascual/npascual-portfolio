@@ -3,9 +3,9 @@ import { LINK_TYPE, TAGS } from "@/types/types";
 export const info = {
   initials: "NP",
   name: "Nicolette Pascual",
-  title: "Front-End Developer | Web Developer",
+  title: "Software Developer",
   metaContent:
-    "Front-end web and mobile app developer with experience in React and Flutter. Skilled front-end development with HTML, CSS, and TypeScript proficiency.",
+    "Software Developer with experience in front-end development with React, HTML, CSS, and TypeScript.",
   footerLink: "https://www.linkedin.com/in/nicolettepascual/",
 };
 
@@ -36,17 +36,17 @@ export const navbarData: NavbarData = {
 export const landingContentData = {
   title: info.name,
   subtitles: [
-    "Front-End Developer / Web Developer",
+    "Software Developer",
     '"Occasional" Mobile App Developer',
-    "Lifelong learner",
     "Video Game Enthusiast",
+    "Lifelong learner",
   ],
 };
 
 export const aboutSectionData = {
   title: "About Me",
   content:
-    "I'm Nicolette, a front-end developer with a passion for learning. My career began as a mobile app developer, and I eventually moved into web development. Learning new things that spark my interest is always on my to-do list.",
+    "I'm Nicolette, a software developer with a passion for learning. My career began as a mobile app developer, and I eventually moved into web development. Learning new things that spark my interest is always on my to-do list.",
   imageUrl: "portfolio/self-01",
   imageText: "Hello :)",
 };
@@ -56,11 +56,43 @@ export const projectsSectionData = {
   modalLinks: "",
   projects: [
     {
+      thumbnail: "portfolio/proj/dchu",
+      title: "DC Heroes United",
+      subtitle:
+        "An interactive streaming series that presents an original storyline featuring iconic DC superheroes",
+      carouselImgList: [
+        "portfolio/proj/dchu-1",
+        "portfolio/proj/dchu-2",
+        "portfolio/proj/dchu-3",
+      ],
+      tags: [
+        TAGS.TYPESCRIPT,
+        TAGS.CONSTRUCT3,
+        TAGS.PLAYFAB,
+        TAGS.GENVID,
+        TAGS.VS_CODE,
+      ],
+      links: [
+        {
+          type: LINK_TYPE.MAIN_WEBSITE,
+          url: "https://dcheroesunited.com/",
+        },
+        {
+          type: LINK_TYPE.SECONDARY_WEBSITE,
+          url: "https://genvid.com/titles/dc-heroes-united/",
+        },
+        {
+          type: LINK_TYPE.YOUTUBE,
+          url: "https://www.youtube.com/watch?v=bwcA1lhRK84",
+        },
+      ],
+    },
+    {
       thumbnail: "portfolio/proj/sh",
       title: "Silent Hill: Ascension",
       subtitle:
-        "A massively interactive live event (MILE) in which the worldwide audience determines the course of the story",
-      carouselImgList: ["portfolio/proj/sh"],
+        "An innovative MILE that invites a global audience to shape an all-new Silent Hill story",
+      carouselImgList: ["portfolio/proj/sh-1", "portfolio/proj/sh-2"],
       tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.GENVID, TAGS.VS_CODE],
       links: [
         {
@@ -82,7 +114,12 @@ export const projectsSectionData = {
       title: "The Walking Dead: Last Mile",
       subtitle:
         "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive",
-      carouselImgList: ["portfolio/proj/twd-1", "portfolio/proj/twd-2"],
+      carouselImgList: [
+        "portfolio/proj/twd-1",
+        "portfolio/proj/twd-2",
+        "portfolio/proj/twd-3",
+        "portfolio/proj/twd-4",
+      ],
       tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.GENVID, TAGS.VS_CODE],
       links: [
         {
@@ -109,7 +146,7 @@ export const projectsSectionData = {
         content:
           "I've worked on a number of projects with Dynameyes, Inc. but as I have signed a non-disclosure contract with them, further details about these projects are confidential.\\n You could check out the company's portfolio to see some of my projects there!",
         btnTitle: "Learn More",
-        btnLink: "https://dynameyes.com/portfolio/",
+        btnLink: "https://dynameyes.dev/portfolio.html",
       },
       carouselImgList: ["portfolio/proj/dyn"],
       tags: [
@@ -169,7 +206,7 @@ export const skillsSectionData = {
     { iconId: "bi:github", text: "GitHub" },
     { iconId: "logos:visual-studio-code", text: "Visual Studio Code" },
     { iconId: "devicon:androidstudio", text: "Android Studio" },
-    { iconId: "logos:jira", text: "JIRA" },
+    { iconId: "logos:jira", text: "Jira" },
     { iconId: "simple-icons:clickup", text: "ClickUp" },
     { iconId: "logos:microsoft-teams", text: "Microsoft Teams" },
     { iconId: "logos:notion-icon", text: "Notion" },
@@ -184,21 +221,21 @@ export const experienceSectionData = {
   workExperience: [
     {
       title: "Junior Web Application Developer",
-      year: "2022 - Present",
+      year: "Aug 2022 - Jan 2025",
       subtitle: "Streamline Studios",
       description:
         "Worked on multiple web game projects using React, Typescript, and Genvid Technology",
     },
     {
       title: "Software Engineer",
-      year: "2020 - 2022",
+      year: "Jan 2020 - Jul 2022",
       subtitle: "Dynameyes, Inc.",
       description:
         "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Fluter framework for mobile apps",
     },
     {
       title: "Web Developer Intern",
-      year: "2018",
+      year: "Jun 2018 - Aug 2018",
       subtitle: "Senate of the Phillpines",
       description:
         "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
