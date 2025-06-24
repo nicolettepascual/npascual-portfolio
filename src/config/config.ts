@@ -14,6 +14,7 @@ export enum SECTIONS {
   WORKS = "WORKS",
   SKILLS = "SKILLS",
   EXPERIENCE = "EXPERIENCE",
+  CERTIFICATIONS = "CERTIFICATIONS",
   CONTACT = "CONTACT",
 }
 
@@ -29,6 +30,7 @@ export const navbarData: NavbarData = {
     [SECTIONS.WORKS]: { name: "Works", id: "works" },
     [SECTIONS.SKILLS]: { name: "Skills", id: "skills" },
     [SECTIONS.EXPERIENCE]: { name: "Experience", id: "experience" },
+    [SECTIONS.CERTIFICATIONS]: { name: "Certifications", id: "certifications" },
     [SECTIONS.CONTACT]: { name: "Contact", id: "contact" },
   },
 };
@@ -252,6 +254,47 @@ export const experienceSectionData = {
         "Gawad Agham Excellence in Leadership Award",
         "Gawad Agham Runner-Up For Best Thesis in App Category",
       ],
+    },
+  ],
+};
+
+export const certificationsSectionData = {
+  title: "Certifications and Online Courses",
+  certifications: [
+    {
+      title: "IT Customer Support Basics",
+      date: "June 2025",
+      subtitle: "Cisco Networking Academy",
+      description:
+        "Covers the basics of help desk operations, customer service, and remote troubleshooting.",
+    },
+    {
+      title: "Workflow Specialist Certificate",
+      date: "March 2025",
+      subtitle: "Asana Academy",
+      description:
+        "Demonstrates skills in team leadership, project management, and workflow optimization.",
+    },
+    {
+      title: "Foundations Skill Badge",
+      date: "March 2025",
+      subtitle: "Asana Academy",
+      description:
+        "Focuses on project management, team communication, and Asana basics.",
+    },
+    {
+      title: "Build a free website with WordPress",
+      date: "January 2025",
+      subtitle: "Coursera Project Network",
+      description:
+        "Hands-on project for creating and customizing a WordPress website without coding.",
+    },
+    {
+      title: "Business Analysis and Process Management",
+      date: "January 2025",
+      subtitle: "Coursera Project Network",
+      description:
+        "Covers essential skills for analyzing and improving business processes.",
     },
   ],
 };
