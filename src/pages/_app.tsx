@@ -2,18 +2,25 @@ import "tailwindcss/tailwind.css";
 import "@/styles/main.css";
 
 import { AppProps } from "next/app";
-import { Roboto, Just_Another_Hand } from "next/font/google";
+import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-roboto",
-});
-
-const justAnotherHand = Just_Another_Hand({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400"],
+  variable: "--font-montserrat",
+});
+
+const taytex = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Taytex.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
   variable: "--font-handwriting",
+  display: "swap",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -21,11 +28,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>{`
         :root {
-          --font-handwriting: ${justAnotherHand.style.fontFamily};
+          --font-handwriting: ${taytex.style.fontFamily};
+          --font-montserrat: ${montserrat.style.fontFamily};
         }
       `}</style>
       <main
-        className={`${roboto.variable} ${justAnotherHand.variable} font-sans`}
+        className={`${montserrat.variable} ${taytex.variable} font-sans`}
       >
         <Component {...pageProps} />
       </main>

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const withMT = require("@material-tailwind/react/utils/withMT");
 
@@ -11,7 +12,7 @@ const config: Config = withMT({
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["var(--font-roboto)"],
+        sans: ["var(--font-montserrat)", ...defaultTheme.fontFamily.sans],
         handwriting: ["var(--font-handwriting)"],
       },
       colors: {

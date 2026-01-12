@@ -52,7 +52,7 @@ const Works = () => {
                 <Chip
                   key={`${tagName}_${index}`}
                   className={cx(
-                    "font-handwriting text-2xl font-thin capitalize leading-none",
+                    "font-montserrat text-xl font-thin capitalize leading-none",
                     index % 2 === 0 ? "bg-main-blue" : "bg-powder-blue",
                   )}
                   size="sm"
