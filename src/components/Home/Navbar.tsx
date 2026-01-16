@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import cx from "classnames";
 import style from "./LandingContainer.module.css";
 import { SECTIONS, navbarData } from "@/config/config";
+import { ArrowDown } from "lucide-react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const fontColor =
-    isScrolled || showMenuNavbar ? "text-gray-500" : "text-white";
+    isScrolled || showMenuNavbar ? "text-gray-500" : "text-muted-foreground";
 
   const linkList = Object.keys(navbarData.links).map(
     (key) => navbarData.links[key as SECTIONS],
@@ -56,7 +57,7 @@ const Navbar = () => {
         className={cx(
           "fixed top-0 z-50 w-full transition-all duration-300 ",
           (isScrolled || showMenuNavbar) &&
-            cx(style.scrolledNavbar, "shadow-lg"),
+            "bg-background/80 py-2 shadow-sm backdrop-blur-md",
           !isScrolled && !showMenuNavbar && style.navbar,
         )}
       >
@@ -66,7 +67,7 @@ const Navbar = () => {
               <Link
                 activeClass="active"
                 className={cx(
-                  "flex-shrink-0 cursor-pointer font-handwriting text-2xl font-semibold",
+                  "nav-link flex-shrink-0 cursor-pointer text-sm font-medium tracking-wide",
                   fontColor,
                 )}
                 smooth
@@ -81,7 +82,7 @@ const Navbar = () => {
                     key={item.name}
                     item={item}
                     offset={-65}
-                    customClass="cursor-pointer transition duration-300 hover:text-black"
+                    customClass="cursor-pointer transition duration-300 nav-link"
                   />
                 ))}
               </div>
@@ -89,7 +90,7 @@ const Navbar = () => {
             <div className="mr-2 flex md:hidden">
               <button
                 onClick={() => setShowMenuNavbar(!showMenuNavbar)}
-                className="text-gray-500 transition duration-300 hover:text-black focus:outline-none"
+                className="nav-link transition duration-300 focus:outline-none"
               >
                 {showMenuNavbar ? (
                   <i className={cx("fa-solid fa-xmark", fontColor)} />
@@ -115,7 +116,7 @@ const Navbar = () => {
                 key={item.name}
                 item={item}
                 offset={(index + 1) % 2 === 0 ? -65 : -128}
-                customClass="block cursor-pointer rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:text-black"
+                customClass="block cursor-pointer rounded-md px-3 py-2 text-base nav-link"
               />
             ))}
           </div>
@@ -123,7 +124,7 @@ const Navbar = () => {
       </nav>
       <Link
         className={cx(
-          "fixed bottom-2 z-50 flex flex-row text-white sm:left-[35%] md:left-[45%]",
+          "text-muted-foreground fixed bottom-2 z-50 flex flex-row sm:left-[35%] md:left-[45%]",
           isScrolled && "hidden",
         )}
         activeClass="active"
@@ -134,10 +135,10 @@ const Navbar = () => {
       >
         <button
           className={cx(
-            "flex aspect-square animate-pulse rounded-full bg-powder-blue p-1.5 delay-1000 focus:outline-none",
+            "flex aspect-square animate-pulse delay-1000 focus:outline-none",
           )}
         >
-          <i className="fa-solid fa-chevron-down text-white" />
+          <ArrowDown className="mt-1.5 h-4 w-4 animate-bounce" />
         </button>
         <span className="ml-2 flex cursor-pointer items-center justify-center">
           Scroll Down

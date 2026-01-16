@@ -2,8 +2,239 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
+@layer base {
+  :root {
+    /* Inspired Palette - Based on #699ABC */
+    --background: 204 35% 96%;
+    --foreground: 204 45% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 45% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 45% 15%;
+
+    /* Ocean Blue Primary - #699ABC */
+    --primary: 204 38% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Sky Secondary */
+    --secondary: 204 30% 90%;
+    --secondary-foreground: 204 40% 20%;
+
+    --muted: 204 25% 93%;
+    --muted-foreground: 204 20% 45%;
+
+    /* Light Sky Blue Accent - Stays within blue family */
+    --accent: 200 60% 78%;
+    --accent-foreground: 204 45% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 204 40% 98%;
+
+    --border: 204 28% 86%;
+    --input: 204 28% 86%;
+    --ring: 204 38% 57%;
+
+    --radius: 0.5rem;
+
+    /* Custom Colors - Predominantly Blue */
+    --ocean: 204 38% 57%;
+    --ocean-deep: 204 45% 42%;
+    --sky: 204 50% 85%;
+    --sky-light: 204 40% 94%;
+    --sky-pale: 200 55% 92%;
+    --cloud: 200 30% 98%;
+    --polaroid: 200 20% 97%;
+    --polaroid-shadow: 204 30% 60%;
+
+    /* Gradients - All Blue Tones */
+    --gradient-sky: linear-gradient(
+      180deg,
+      hsl(200 55% 92%) 0%,
+      hsl(204 35% 96%) 50%,
+      hsl(200 30% 98%) 100%
+    );
+    --gradient-ocean: linear-gradient(
+      135deg,
+      hsl(204 38% 57%) 0%,
+      hsl(204 45% 45%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(200 60% 78%) 0%,
+      hsl(204 50% 70%) 100%
+    );
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --font-sans: Montserrat, ui-sans-serif, system-ui, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+
+  .dark {
+    --background: 204 45% 10%;
+    --foreground: 204 30% 95%;
+
+    --card: 204 40% 14%;
+    --card-foreground: 204 30% 95%;
+
+    --popover: 204 40% 14%;
+    --popover-foreground: 204 30% 95%;
+
+    --primary: 204 38% 62%;
+    --primary-foreground: 204 45% 10%;
+
+    --secondary: 204 35% 20%;
+    --secondary-foreground: 204 30% 95%;
+
+    --muted: 204 35% 18%;
+    --muted-foreground: 204 20% 65%;
+
+    --accent: 200 50% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 204 40% 98%;
+
+    --border: 204 35% 22%;
+    --input: 204 35% 22%;
+    --ring: 204 38% 62%;
+
+    --ocean: 204 38% 62%;
+    --ocean-deep: 204 45% 50%;
+    --sky: 204 35% 25%;
+    --sky-light: 204 30% 18%;
+    --polaroid: 204 25% 18%;
+    --polaroid-shadow: 204 35% 10%;
+
+    --gradient-sky: linear-gradient(
+      180deg,
+      hsl(204 40% 12%) 0%,
+      hsl(204 35% 10%) 100%
+    );
+
+    --font-sans: Montserrat, ui-sans-serif, system-ui, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Permanent Marker", cursive;
+  }
+}
+
+@layer components {
+  .polaroid-card {
+    @apply bg-polaroid p-3 pb-12 shadow-lg transition-all duration-300;
+    box-shadow:
+      0 4px 20px -4px hsl(var(--polaroid-shadow) / 0.3),
+      0 8px 40px -8px hsl(var(--polaroid-shadow) / 0.2);
+  }
+
+  .polaroid-card:hover {
+    transform: translateY(-4px) rotate(1deg);
+    box-shadow:
+      0 8px 30px -4px hsl(var(--polaroid-shadow) / 0.35),
+      0 16px 50px -8px hsl(var(--polaroid-shadow) / 0.25);
+  }
+
+  .text-gradient-ocean {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--ocean)) 0%,
+      hsl(var(--ocean-deep)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-sky-gradient {
+    background: var(--gradient-sky);
+  }
+
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground relative transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply bg-primary absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-up-delay-1 {
+    animation: fadeUp 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-3 {
+    animation: fadeUp 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 *::-webkit-scrollbar {
@@ -18,15 +249,4 @@
   background-color: theme("colors.main-blue");
   border-radius: 14px;
   border: 3px solid theme("colors.french-gray");
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }

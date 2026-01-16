@@ -38,8 +38,8 @@ export const navbarData: NavbarData = {
 export const landingContentData = {
   title: info.name,
   subtitles: [
+    "Tech Professional",
     "Software Developer",
-    '"Occasional" Mobile App Developer',
     "Video Game Enthusiast",
     "Lifelong learner",
   ],
