@@ -133,7 +133,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
     font-family: "Inter", sans-serif;
   }
 
@@ -149,17 +149,11 @@
 
 @layer components {
   .polaroid-card {
-    @apply bg-polaroid p-3 pb-12 shadow-lg transition-all duration-300;
-    box-shadow:
-      0 4px 20px -4px hsl(var(--polaroid-shadow) / 0.3),
-      0 8px 40px -8px hsl(var(--polaroid-shadow) / 0.2);
+    @apply p-3 pb-12 transition-all duration-300;
   }
 
   .polaroid-card:hover {
     transform: translateY(-4px) rotate(1deg);
-    box-shadow:
-      0 8px 30px -4px hsl(var(--polaroid-shadow) / 0.35),
-      0 16px 50px -8px hsl(var(--polaroid-shadow) / 0.25);
   }
 
   .text-gradient-ocean {
@@ -178,12 +172,12 @@
   }
 
   .nav-link {
-    @apply text-muted-foreground hover:text-foreground relative transition-colors duration-300;
+    @apply relative text-muted-foreground transition-colors duration-300 hover:text-foreground;
   }
 
   .nav-link::after {
     content: "";
-    @apply bg-primary absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300;
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300;
   }
 
   .nav-link:hover::after {

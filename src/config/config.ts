@@ -47,11 +47,20 @@ export const landingContentData = {
 
 export const aboutSectionData = {
   title: "About Me",
+  subtitle:
+    "Passionate about the technical side of things — and what's around it",
   content:
-    "I'm Nicolette, a software developer with a passion for learning. My career began as a mobile app developer, and I eventually moved into web development. Learning new things that spark my interest is always on my to-do list.",
+    "I'm Nicolette, a tech professional with a passion for learning. I've spent several years building mobile and web applications, which shaped how I approach problem-solving, systems, and collaboration with project teams. Learning new things that spark my interest is always on my to-do list.",
   imageUrl: "portfolio/self-01",
   imageText: "Hello :)",
 };
+
+export const aboutSectionSkills = [
+  "Administrative Work",
+  "Project Coordination",
+  "Web Development",
+  "Mobile App Development",
+];
 
 export const projectsSectionData = {
   title: "Works",
