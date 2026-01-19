@@ -149,7 +149,7 @@
 
 @layer components {
   .polaroid-card {
-    @apply p-3 pb-12 transition-all duration-300;
+    @apply p-3 transition-all duration-300;
   }
 
   .polaroid-card:hover {

@@ -71,6 +71,7 @@ export const projectsSectionData = {
       title: "DC Heroes United",
       subtitle:
         "An interactive streaming series that presents an original storyline featuring iconic DC superheroes",
+      rotation: "-rotate-2",
       carouselImgList: [
         "portfolio/proj/dchu-1",
         "portfolio/proj/dchu-2",
@@ -104,6 +105,7 @@ export const projectsSectionData = {
       subtitle:
         "An innovative MILE that invites a global audience to shape an all-new Silent Hill story",
       carouselImgList: ["portfolio/proj/sh-1", "portfolio/proj/sh-2"],
+      rotation: "rotate-1",
       tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.GENVID, TAGS.VS_CODE],
       links: [
         {
@@ -125,6 +127,7 @@ export const projectsSectionData = {
       title: "The Walking Dead: Last Mile",
       subtitle:
         "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive",
+      rotation: "-rotate-2",
       carouselImgList: [
         "portfolio/proj/twd-1",
         "portfolio/proj/twd-2",
@@ -160,6 +163,7 @@ export const projectsSectionData = {
         btnLink: "https://dynameyes.dev/portfolio.html",
       },
       carouselImgList: ["portfolio/proj/dyn"],
+      rotation: "rotate-2",
       tags: [
         TAGS.VUE,
         TAGS.TYPESCRIPT,
@@ -181,6 +185,7 @@ export const projectsSectionData = {
       title: "Lasallian Food Square App",
       subtitle:
         "An online food reservation app for DLSU-D Food Square, developed as a college thesis project",
+      rotation: "rotate-2",
       carouselImgList: [
         "portfolio/proj/lfsa-1",
         "portfolio/proj/lfsa-2",

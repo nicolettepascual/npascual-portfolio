@@ -11,6 +11,7 @@ import { Chip, IconButton } from "@material-tailwind/react";
 import { Button, Typography } from "@material-tailwind/react";
 import FadeInSection from "../General/FadeInSection";
 import SectionWrapper from "../General/SectionWrapper";
+import { CldImage } from "next-cloudinary";
 
 const Works = () => {
   const { title, projects } = projectsSectionData;
@@ -24,7 +25,7 @@ const Works = () => {
 
   return (
     <>
-      <SectionWrapper section={SECTIONS.WORKS}>
+      {/* <SectionWrapper section={SECTIONS.WORKS}>
         <SectionTitle text={title} />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
@@ -43,24 +44,74 @@ const Works = () => {
             </FadeInSection>
           ))}
         </div>
-      </SectionWrapper>
+      </SectionWrapper> */}
+
+      <section id="works" className="bg-secondary/30 py-24">
+        <div className="container mx-auto px-6">
+          <div className="mb-16 text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">
+              My Work
+            </p>
+            <h2 className="font-serif text-3xl text-foreground md:text-5xl">
+              Featured Projects
+            </h2>
+          </div>
+
+          <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {projects.map((project, index) => (
+              <div
+                key={`${project}_${index}`}
+                onClick={() => viewProject(project as unknown as Project)}
+                className={`polaroid-card group cursor-pointer bg-white ${project.rotation}`}
+              >
+                <div
+                  className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-sm bg-gradient-to-br`}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center bg-foreground/0 transition-colors duration-300 group-hover:bg-foreground/10">
+                    <CldImage
+                      className="h-full w-full object-cover object-center"
+                      alt="image"
+                      height={600}
+                      loading="lazy"
+                      priority={false}
+                      src={project.thumbnail}
+                      width={600}
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2 pt-4">
+                  <h3 className="font-serif text-lg font-medium text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {project.subtitle}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded bg-muted px-2 py-0.5 text-xs text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Modal
         footerContent={
           <>
-            <div className="sm:flex-no-wrap flex flex-wrap gap-1">
-              {selectedProject?.tags.map((tagName, index) => (
-                <Chip
-                  key={`${tagName}_${index}`}
-                  className={cx(
-                    "font-montserrat text-xl font-thin capitalize leading-none",
-                    index % 2 === 0 ? "bg-main-blue" : "bg-powder-blue",
-                  )}
-                  size="sm"
-                  value={tagName}
-                />
-              ))}
+            <div className="sm:flex-no-wrap mt-0 flex flex-wrap gap-1">
+              A sample of a very long text A sample of a very long text A sample
+              of a very long text A sample of a very long text A sample of a
+              very long textA sample of a very long text
             </div>
-            <div className="mt-1 flex gap-1 md:mt-0">
+            <div className="mt-3 flex gap-1">
               {selectedProject?.links.map((link, index) => {
                 let iconType = "solid";
                 if (
