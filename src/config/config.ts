@@ -1,4 +1,4 @@
-import { LINK_TYPE, TAGS } from "@/types/types";
+import { LINK_TYPE, TAGS, TimelineItem } from "@/types/types";
 
 export const info = {
   initials: "NP",
@@ -309,45 +309,48 @@ export const skillsSectionData = {
   ],
 };
 
-export const experienceSectionData = {
-  title: "Education and Experience",
-  workExperience: [
-    {
-      title: "Junior Web Application Developer",
-      year: "Aug 2022 - Jan 2025",
-      subtitle: "Streamline Studios",
-      description:
-        "Worked on multiple web game projects using React, Typescript, and Genvid Technology",
-    },
-    {
-      title: "Software Engineer",
-      year: "Jan 2020 - Jul 2022",
-      subtitle: "Dynameyes, Inc.",
-      description:
-        "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Fluter framework for mobile apps",
-    },
-    {
-      title: "Web Developer Intern",
-      year: "Jun 2018 - Aug 2018",
-      subtitle: "Senate of the Phillpines",
-      description:
-        "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
-    },
-  ],
-  education: [
-    {
-      title: "Bachelor of Science in Computer Science",
-      year: "2015-2019",
-      subtitle: "De La Salle University - Dasmariñas",
-      listContent: [
-        "Deans Honor Lister (2016; 2017; 2018)",
-        "Computer Science and Information Technology Program Council Auditor",
-        "Gawad Agham Excellence in Leadership Award",
-        "Gawad Agham Runner-Up For Best Thesis in App Category",
-      ],
-    },
-  ],
-};
+export const experienceSectionData: TimelineItem[] = [
+  {
+    title: "Program Coordinator",
+    organization: "1CloudHub\n(hired under Nityo Infotech Phillpines)",
+    period: "Jun 2025 - Dec 2025",
+    description:
+      "Managed projects, including task assignment, timeline tracking, and follow-ups to ensure timely delivery",
+    type: "work",
+  },
+  {
+    title: "Junior Web Application Developer",
+    organization: "Streamline Studios",
+    period: "Aug 2022 - Jan 2025",
+    description:
+      "Worked on multiple web game projects using React, Typescript, and Genvid Technology",
+    type: "work",
+  },
+  {
+    title: "Software Engineer",
+    organization: "Dynameyes, Inc.",
+    period: "Jan 2020 - Jul 2022",
+    description:
+      "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Fluter framework for mobile apps",
+    type: "work",
+  },
+  {
+    title: "Web Developer Intern",
+    organization: "Startup Inc.",
+    period: "Jun 2018 - Aug 2018",
+    description:
+      "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
+    type: "work",
+  },
+  {
+    title: "Bachelor of Science in Computer Science",
+    organization: "De La Salle University - Dasmariñas",
+    period: "Jun 2015 - May 2019",
+    description:
+      "• Deans Honor Lister (2016; 2017; 2018)\n• Program Council Auditor\n• Gawad Agham Excellence in Leadership Awardee\n• Gawad Agham Runner-Up For Best Thesis in App Category",
+    type: "education",
+  },
+];
 
 export const certificationsSectionData = {
   title: "Certifications and Online Courses",

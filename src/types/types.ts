@@ -17,12 +17,12 @@ export interface Project {
   links: Link[];
 }
 
-export interface TimelineData {
+export interface TimelineItem {
   title: string;
-  subtitle: string;
-  description?: string;
-  year: string;
-  listContent?: string[];
+  organization: string;
+  period: string;
+  description: string;
+  type: "work" | "education";
 }
 
 export enum TAGS {
