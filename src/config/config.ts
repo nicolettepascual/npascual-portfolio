@@ -356,37 +356,50 @@ export const certificationsSectionData = {
   title: "Certifications and Online Courses",
   certifications: [
     {
+      title: "AWS Cloud Practitioner Essentials",
+      date: "July 2025",
+      link: "https://asset.cloudinary.com/dhxirx75d/b56cfcb9adf5ec24dc37008fa4366133",
+      issuer: "AWS Training Online",
+      description:
+        "Tackles AWS Cloud concepts, AWS services, security, architecture, pricing, and support to build one's AWS Cloud knowledge",
+    },
+    {
       title: "IT Customer Support Basics",
       date: "June 2025",
-      subtitle: "Cisco Networking Academy",
+      link: "https://www.credly.com/badges/4e49b890-fcc4-4f64-94fe-b39ab5384d04/linked_in_profile",
+      issuer: "Cisco Networking Academy",
       description:
         "Covers the basics of help desk operations, customer service, and remote troubleshooting.",
     },
     {
       title: "Workflow Specialist Certificate",
       date: "March 2025",
-      subtitle: "Asana Academy",
+      link: "https://certifications.asana.com/ef06ab4d-87ea-48bd-8e15-b2ddbac0361a",
+      issuer: "Asana Academy",
       description:
         "Demonstrates skills in team leadership, project management, and workflow optimization.",
     },
     {
       title: "Foundations Skill Badge",
       date: "March 2025",
-      subtitle: "Asana Academy",
+      link: "https://certifications.asana.com/072d8a05-4633-4912-8570-794c28b16692",
+      issuer: "Asana Academy",
       description:
         "Focuses on project management, team communication, and Asana basics.",
     },
     {
       title: "Build a free website with WordPress",
       date: "January 2025",
-      subtitle: "Coursera Project Network",
+      issuer: "Coursera Project Network",
+      link: "https://www.coursera.org/account/accomplishments/verify/LMAIJUCSI9YD",
       description:
         "Hands-on project for creating and customizing a WordPress website without coding.",
     },
     {
       title: "Business Analysis and Process Management",
       date: "January 2025",
-      subtitle: "Coursera Project Network",
+      link: "https://www.coursera.org/account/accomplishments/verify/Z0QXFWVXR7YP",
+      issuer: "Coursera Project Network",
       description:
         "Covers essential skills for analyzing and improving business processes.",
     },
