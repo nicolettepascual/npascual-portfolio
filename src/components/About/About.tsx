@@ -7,26 +7,12 @@ import {
 import SectionTitle from "../typography/SectionTitle";
 import SectionContent from "../typography/SectionContent";
 import PolaroidCard from "./PolaroidCard";
-import FadeInSection from "../General/FadeInSection";
 import SectionWrapper from "../General/SectionWrapper";
 
 const About = () => {
   const { content, imageText, imageUrl, title, subtitle } = aboutSectionData;
-
-  // return (
-  //   <SectionWrapper section={SECTIONS.ABOUT} rowDisplay>
-  //     <FadeInSection customClass="justify-center">
-  //       <PolaroidCard imageUrl={imageUrl} title={imageText} />
-  //     </FadeInSection>
-  //     <div className="m-8 flex max-w-lg flex-col justify-center">
-  //       <SectionTitle text={title} />
-  //       <SectionContent text={content} />
-  //     </div>
-  //   </SectionWrapper>
-  // );
-
   return (
-    <section id="about" className="bg-background py-24">
+    <SectionWrapper section={SECTIONS.ABOUT}>
       <div className="flex min-h-full flex-grow">
         <div className="mx-auto max-w-3xl">
           <div className="grid items-center gap-12 md:grid-cols-2">
@@ -59,7 +45,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 export default About;

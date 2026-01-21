@@ -12,34 +12,10 @@ const Contact = () => {
   const { title, subtitle, links } = contactSection;
 
   return (
-    // <SectionWrapper section={SECTIONS.CONTACT}>
-    //   <SectionTitle text={title} />
-    //   <SectionContent text={subtitle} />
-    //   <div className="mt-4 flex flex-col items-center gap-4 md:flex-row md:justify-center">
-    //     {links.map((link, index) => (
-    //       <a key={`${link.text}_${index}`} href={link.url} target="_blank">
-    //         <Button
-    //           className="flex items-center gap-3"
-    //           size="lg"
-    //           color={link.color as colors}
-    //         >
-    //           <i className={link.icon} />
-    //           {link.text}
-    //         </Button>
-    //       </a>
-    //     ))}
-    //   </div>
-    // </SectionWrapper>
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-background py-24"
+    <SectionWrapper
+      section={SECTIONS.CONTACT}
+      sectionClass="relative overflow-hidden"
     >
-      {/* Decorative background */}
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-ocean/5 blur-3xl" />
-        <div className="bg-sunset/5 absolute right-0 top-0 h-64 w-64 rounded-full blur-3xl" />
-      </div>
-
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-6 font-serif text-3xl text-foreground md:text-5xl">
@@ -87,7 +63,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

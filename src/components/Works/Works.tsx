@@ -25,28 +25,7 @@ const Works = () => {
 
   return (
     <>
-      {/* <SectionWrapper section={SECTIONS.WORKS}>
-        <SectionTitle text={title} />
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {projects.map((project, index) => (
-            <FadeInSection
-              key={`${project}_${index}`}
-              delay={(index + 1) * 200}
-            >
-              <PolaroidCard
-                customDivClass="my-2 md:my-0 duration-500 hover:scale-105 hover:shadow-xl"
-                customCardClass="w-80"
-                imageUrl={project.thumbnail}
-                onClick={() => viewProject(project as unknown as Project)}
-                title={project.title}
-                subtitle={project.subtitle}
-              />
-            </FadeInSection>
-          ))}
-        </div>
-      </SectionWrapper> */}
-
-      <section id="works" className="bg-secondary/30 py-24">
+      <SectionWrapper section={SECTIONS.WORKS}>
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">
@@ -101,8 +80,7 @@ const Works = () => {
             ))}
           </div>
         </div>
-      </section>
-
+      </SectionWrapper>
       <Modal
         footerContent={
           <>

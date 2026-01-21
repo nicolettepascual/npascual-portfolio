@@ -9,29 +9,8 @@ const Skills = () => {
   const { title, skills } = skillsSectionData;
 
   return (
-    // <SectionWrapper section={SECTIONS.SKILLS}>
-    //   <SectionTitle text={title} />
-    //   <div className="gap- mt-3 grid grid-cols-4 gap-8 md:grid-cols-6 md:gap-20">
-    //     {skills.map((skill, index) => (
-    //       <Tooltip
-    //         key={`${skill.text}_${index}`}
-    //         content={skill.text}
-    //         animate={{
-    //           mount: { scale: 1, y: 0 },
-    //           unmount: { scale: 0, y: 25 },
-    //         }}
-    //       >
-    //         <Icon
-    //           className="text-5xl duration-500 hover:scale-150"
-    //           icon={skill.iconId}
-    //         />
-    //       </Tooltip>
-    //     ))}
-    //   </div>
-    // </SectionWrapper>
-    <section
-      id="skills"
-      className="bg-gradient-to-b from-sky-light/30 to-background px-4 py-20"
+    <SectionWrapper
+      section={SECTIONS.SKILLS}
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
@@ -81,7 +60,7 @@ const Skills = () => {
           })}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 export default Skills;
