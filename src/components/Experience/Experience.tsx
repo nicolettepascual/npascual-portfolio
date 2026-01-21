@@ -1,26 +1,21 @@
 "use client";
-import { SECTIONS, experienceSectionData } from "@/config/config";
+import {
+  SECTIONS,
+  experienceSectionData,
+  experienceSectionHeaderData,
+} from "@/config/config";
 import { Briefcase, GraduationCap } from "lucide-react";
-import SectionTitle from "../typography/SectionTitle";
-import TimelineComponent from "./Timeline";
-import TimelineTitle from "./TimelineTitle";
 import SectionWrapper from "../General/SectionWrapper";
+import SectionHeader from "../typography/SectionHeader";
 
 const Experience = () => {
-  // const { title, workExperience, education } = experienceSectionData;
+  const { title, content } = experienceSectionHeaderData;
 
   return (
     <SectionWrapper section={SECTIONS.EXPERIENCE}>
       <div className="mx-auto px-6">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-16 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">
-              My Journey
-            </p>
-            <h2 className="font-serif text-3xl text-foreground md:text-4xl">
-              Experience & Education
-            </h2>
-          </div>
+          <SectionHeader title={title} content={content} />
 
           <div className="relative">
             {/* Timeline line */}

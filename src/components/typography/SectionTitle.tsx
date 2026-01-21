@@ -1,7 +1,7 @@
 const SectionTitle = ({ text }: { text: string }) => (
-  <div className="mb-4 text-center font-handwriting text-5xl md:text-7xl">
+  <h2 className="mt-2 font-serif text-3xl text-foreground md:text-5xl">
     {text}
-  </div>
+  </h2>
 );
 
 export default SectionTitle;

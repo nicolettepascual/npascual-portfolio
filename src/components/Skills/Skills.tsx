@@ -4,25 +4,15 @@ import SectionTitle from "../typography/SectionTitle";
 import { Icon } from "@iconify/react";
 import { Tooltip } from "@material-tailwind/react";
 import SectionWrapper from "../General/SectionWrapper";
+import SectionHeader from "../typography/SectionHeader";
 
 const Skills = () => {
-  const { title, skills } = skillsSectionData;
+  const { title, content, skills } = skillsSectionData;
 
   return (
-    <SectionWrapper
-      section={SECTIONS.SKILLS}
-    >
+    <SectionWrapper section={SECTIONS.SKILLS}>
       <div className="mx-auto max-w-6xl">
-        {/* Section Header */}
-        <div className="mb-16 text-center">
-          <span className="text-sm font-medium uppercase tracking-widest text-ocean">
-            What I Work With
-          </span>
-          <h2 className="font-display mt-2 text-4xl font-bold text-foreground md:text-5xl">
-            Skills & Tools
-          </h2>
-          <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-ocean to-sky" />
-        </div>
+        <SectionHeader title={title} content={content} />
 
         {/* Skills Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6 lg:grid-cols-5">

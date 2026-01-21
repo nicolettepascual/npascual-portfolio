@@ -1,28 +1,18 @@
 "use client";
 import { SECTIONS, certificationsSectionData } from "@/config/config";
 import SectionWrapper from "../General/SectionWrapper";
-import SectionTitle from "../typography/SectionTitle";
-import FadeInSection from "../General/FadeInSection";
 
 import { Award, ExternalLink } from "lucide-react";
+import SectionHeader from "../typography/SectionHeader";
 
 const Certifications = () => {
-  const { title, certifications } = certificationsSectionData;
+  const { title, content, certifications } = certificationsSectionData;
 
   return (
-    <SectionWrapper
-      section={SECTIONS.CERTIFICATIONS}
-    >
+    <SectionWrapper section={SECTIONS.CERTIFICATIONS}>
       <div className="mx-auto px-6">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-16 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">
-              Learning Never Stops
-            </p>
-            <h2 className="font-serif text-3xl text-foreground md:text-4xl">
-              Certifications & Courses
-            </h2>
-          </div>
+          <SectionHeader title={title} content={content} />
 
           <div className="grid gap-6 sm:grid-cols-2">
             {certifications.map((cert, index) => (

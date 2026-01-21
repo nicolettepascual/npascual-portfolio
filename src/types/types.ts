@@ -6,6 +6,7 @@ export interface Link {
 export interface Project {
   thumbnail: string;
   title: string;
+  modalContent?: string;
   overlay?: {
     title: string;
     content: string;

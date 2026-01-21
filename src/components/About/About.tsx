@@ -10,11 +10,12 @@ import PolaroidCard from "./PolaroidCard";
 import SectionWrapper from "../General/SectionWrapper";
 
 const About = () => {
-  const { content, imageText, imageUrl, title, subtitle } = aboutSectionData;
+  const { content, imageText, imageUrl, aboutMeText, subtitle } =
+    aboutSectionData;
   return (
     <SectionWrapper section={SECTIONS.ABOUT}>
       <div className="flex min-h-full flex-grow">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-4xl">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <PolaroidCard
               customDivClass="polaroid-card -rotate-2"
@@ -24,12 +25,8 @@ const About = () => {
 
             {/* About content */}
             <div className="space-y-6">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
-                {title}
-              </p>
-              <h2 className="font-serif text-3xl text-foreground md:text-4xl">
-                {subtitle}
-              </h2>
+              <SectionContent text={aboutMeText} />
+              <SectionTitle text={subtitle} />
               <p className="leading-relaxed text-muted-foreground">{content}</p>
               <div className="flex flex-wrap gap-3 pt-4">
                 {aboutSectionSkills.map((skill) => (

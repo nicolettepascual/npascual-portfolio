@@ -46,7 +46,7 @@ export const landingContentData = {
 };
 
 export const aboutSectionData = {
-  title: "About Me",
+  aboutMeText: "About Me",
   subtitle:
     "Passionate about the technical side of things — and what's around it",
   content:
@@ -63,15 +63,16 @@ export const aboutSectionSkills = [
 ];
 
 export const projectsSectionData = {
-  title: "Works",
-  modalLinks: "",
+  title: "Featured Projects",
+  content: "My Work",
   projects: [
     {
       thumbnail: "portfolio/proj/dchu",
       title: "DC Heroes United",
-      subtitle:
-        "An interactive streaming series that presents an original storyline featuring iconic DC superheroes",
+      subtitle: "A mobile game where players shape a DC superhero story",
       rotation: "-rotate-2",
+      modalContent:
+        "An interactive streaming series that presents an original storyline featuring iconic DC superheroes developed using Construct 3 for Genvid Entertainment.",
       carouselImgList: [
         "portfolio/proj/dchu-1",
         "portfolio/proj/dchu-2",
@@ -103,7 +104,9 @@ export const projectsSectionData = {
       thumbnail: "portfolio/proj/sh",
       title: "Silent Hill: Ascension",
       subtitle:
-        "An innovative MILE that invites a global audience to shape an all-new Silent Hill story",
+        "A browser-based video game with interactive story shaped by a global audience based on the popular video game franchise",
+      modalContent:
+        "A 2024 Creative Arts Emmy Award winning MILE that invites a global audience to shape an all-new Silent Hill story that could be played on a web browser. Developed with React and TypeScript.",
       carouselImgList: ["portfolio/proj/sh-1", "portfolio/proj/sh-2"],
       rotation: "rotate-1",
       tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.GENVID, TAGS.VS_CODE],
@@ -126,7 +129,9 @@ export const projectsSectionData = {
       thumbnail: "portfolio/proj/twd",
       title: "The Walking Dead: Last Mile",
       subtitle:
-        "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive",
+        "A video game played on Facebook Gaming with live interactive story event based on the world of the hit TV series",
+      modalContent:
+        "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive for Genvid Entertainment developed with React, Sass, and Genvid SDK.",
       rotation: "-rotate-2",
       carouselImgList: [
         "portfolio/proj/twd-1",
@@ -185,6 +190,8 @@ export const projectsSectionData = {
       title: "Lasallian Food Square App",
       subtitle:
         "An online food reservation app for DLSU-D Food Square, developed as a college thesis project",
+      modalContent:
+        "An online food reservation app built as a college thesis for De La Salle University - Dasmariñas Food Square; Developed with Android Studio; Won our college's Runner Up For Best Thesis Category",
       rotation: "rotate-2",
       carouselImgList: [
         "portfolio/proj/lfsa-1",
@@ -203,7 +210,8 @@ export const projectsSectionData = {
 };
 
 export const skillsSectionData = {
-  title: "Skills",
+  title: "Skills & Tools",
+  content: "What I Work With",
   skills: [
     { iconId: "devicon:typescript", name: "TypeScript", category: "Frontend" },
     { iconId: "logos:javascript", name: "JavaScript", category: "Frontend" },
@@ -309,6 +317,11 @@ export const skillsSectionData = {
   ],
 };
 
+export const experienceSectionHeaderData = {
+  title: "Experience & Education",
+  content: "My Journey",
+};
+
 export const experienceSectionData: TimelineItem[] = [
   {
     title: "Program Coordinator",
@@ -353,7 +366,8 @@ export const experienceSectionData: TimelineItem[] = [
 ];
 
 export const certificationsSectionData = {
-  title: "Certifications and Online Courses",
+  title: "Certifications & Online Courses",
+  content: "Learning Never Stops",
   certifications: [
     {
       title: "AWS Cloud Practitioner Essentials",

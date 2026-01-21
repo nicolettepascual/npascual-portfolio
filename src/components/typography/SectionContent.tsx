@@ -1,7 +1,7 @@
 const SectionContent = ({ text }: { text: string }) => (
-  <p className="mt-4 px-4 text-center text-base leading-relaxed text-gray-600 md:text-center">
+  <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
     {text}
-  </p>
+  </span>
 );
 
 export default SectionContent;

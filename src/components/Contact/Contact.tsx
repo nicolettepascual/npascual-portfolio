@@ -18,10 +18,8 @@ const Contact = () => {
     >
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mb-6 font-serif text-3xl text-foreground md:text-5xl">
-            {title}
-          </h2>
-          <p className="mb-10 text-lg text-muted-foreground">{subtitle}</p>
+          <SectionTitle text={title} />
+          <p className="mb-10 mt-6 text-lg text-muted-foreground">{subtitle}</p>
 
           <a
             key={"email"}

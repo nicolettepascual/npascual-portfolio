@@ -1,20 +1,17 @@
 "use client";
 import { useState } from "react";
-import cx from "classnames";
 import { SECTIONS, projectsSectionData } from "@/config/config";
 import { LINK_TYPE, Project } from "@/types/types";
-import SectionTitle from "../typography/SectionTitle";
-import PolaroidCard from "../About/PolaroidCard";
 import Modal from "../General/Modal";
 import MaterialCarousel from "../General/MaterialCarousel";
-import { Chip, IconButton } from "@material-tailwind/react";
+import { IconButton } from "@material-tailwind/react";
 import { Button, Typography } from "@material-tailwind/react";
-import FadeInSection from "../General/FadeInSection";
 import SectionWrapper from "../General/SectionWrapper";
 import { CldImage } from "next-cloudinary";
+import SectionHeader from "../typography/SectionHeader";
 
 const Works = () => {
-  const { title, projects } = projectsSectionData;
+  const { title, content, projects } = projectsSectionData;
   const [selectedProject, setSelectedProjected] = useState<Project>();
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -27,14 +24,7 @@ const Works = () => {
     <>
       <SectionWrapper section={SECTIONS.WORKS}>
         <div className="container mx-auto px-6">
-          <div className="mb-16 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">
-              My Work
-            </p>
-            <h2 className="font-serif text-3xl text-foreground md:text-5xl">
-              Featured Projects
-            </h2>
-          </div>
+          <SectionHeader title={title} content={content} />
 
           <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {projects.map((project, index) => (
@@ -85,9 +75,7 @@ const Works = () => {
         footerContent={
           <>
             <div className="sm:flex-no-wrap mt-0 flex flex-wrap gap-1">
-              A sample of a very long text A sample of a very long text A sample
-              of a very long text A sample of a very long text A sample of a
-              very long textA sample of a very long text
+              {selectedProject?.modalContent}
             </div>
             <div className="mt-3 flex gap-1">
               {selectedProject?.links.map((link, index) => {
