@@ -5,18 +5,18 @@ const LandingContainer = () => (
   <div
     id="top"
     className={cx(
-      "bg-sky-gradient flex min-h-screen items-center justify-center ",
+      "bg-sky-gradient flex min-h-screen items-center justify-center",
     )}
   >
     {/* Decorative elements */}
     <div className="absolute inset-0 overflow-hidden">
-      <div className="bg-ocean/5 animate-float absolute left-10 top-20 h-64 w-64 rounded-full blur-3xl" />
+      <div className="animate-float absolute left-10 top-20 h-64 w-64 rounded-full bg-ocean/5 blur-3xl" />
       <div
         className="bg-sunset/5 animate-float absolute bottom-32 right-20 h-96 w-96 rounded-full blur-3xl"
         style={{ animationDelay: "2s" }}
       />
       <div
-        className="bg-sky/30 animate-float absolute left-1/3 top-1/2 h-48 w-48 rounded-full blur-2xl"
+        className="animate-float absolute left-1/3 top-1/2 h-48 w-48 rounded-full bg-sky/30 blur-2xl"
         style={{ animationDelay: "4s" }}
       />
     </div>

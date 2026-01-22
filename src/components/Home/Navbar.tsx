@@ -124,7 +124,7 @@ const Navbar = () => {
       </nav>
       <Link
         className={cx(
-          "text-muted-foreground fixed bottom-2 z-50 flex flex-row sm:left-[35%] md:left-[45%]",
+          "fixed bottom-2 z-50 flex flex-row justify-self-center text-muted-foreground md:left-[45%]",
           isScrolled && "hidden",
         )}
         activeClass="active"

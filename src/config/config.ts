@@ -352,7 +352,7 @@ export const experienceSectionData: TimelineItemData[] = [
   },
   {
     title: "Web Developer Intern",
-    organization: "Dynameyes, Inc.",
+    organization: "Senate of the Philippines",
     period: "Jun 2018 - Aug 2018",
     description:
       "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
