@@ -18,7 +18,7 @@ export interface Project {
   links: Link[];
 }
 
-export interface TimelineItem {
+export interface TimelineItemData {
   title: string;
   organization: string;
   period: string;

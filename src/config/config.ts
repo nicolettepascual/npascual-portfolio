@@ -1,4 +1,4 @@
-import { LINK_TYPE, TAGS, TimelineItem } from "@/types/types";
+import { LINK_TYPE, TAGS, TimelineItemData } from "@/types/types";
 
 export const info = {
   initials: "NP",
@@ -325,7 +325,7 @@ export const experienceSectionHeaderData = {
   content: "My Journey",
 };
 
-export const experienceSectionData: TimelineItem[] = [
+export const experienceSectionData: TimelineItemData[] = [
   {
     title: "Program Coordinator",
     organization: "1CloudHub\n(hired under Nityo Infotech Phillpines)",
@@ -352,7 +352,7 @@ export const experienceSectionData: TimelineItem[] = [
   },
   {
     title: "Web Developer Intern",
-    organization: "Startup Inc.",
+    organization: "Dynameyes, Inc.",
     period: "Jun 2018 - Aug 2018",
     description:
       "Developed a service record web application for the Human Resources Department using HTML and PHP with basic implementation of CSS and AJAX",
