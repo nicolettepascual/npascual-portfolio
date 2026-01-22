@@ -11,7 +11,7 @@ const Skills = () => {
 
   return (
     <SectionWrapper section={SECTIONS.SKILLS}>
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl px-6 md:px-0">
         <SectionHeader title={title} content={content} />
 
         {/* Skills Grid */}

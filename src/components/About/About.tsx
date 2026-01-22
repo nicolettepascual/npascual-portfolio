@@ -24,7 +24,7 @@ const About = () => {
             />
 
             {/* About content */}
-            <div className="space-y-6">
+            <div className="space-y-6 px-6 md:px-0">
               <SectionContent text={aboutMeText} />
               <SectionTitle text={subtitle} />
               <p className="leading-relaxed text-muted-foreground">{content}</p>
