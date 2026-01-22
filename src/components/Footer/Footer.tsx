@@ -7,10 +7,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-secondary/50 p-12">
+    <footer className="border-t border-border bg-secondary/50 py-12 md:p-12">
       <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
         <p className="text-sm text-muted-foreground">
-          <span className="ml-2 flex items-center justify-center gap-1">
+          <span className="ml-2 flex items-center justify-center gap-1 ">
             © {currentYear} Portfolio. Crafted with{" "}
             <a
               href="https://react.dev"
