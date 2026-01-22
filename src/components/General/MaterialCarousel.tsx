@@ -1,7 +1,6 @@
 import { Carousel } from "@material-tailwind/react";
 import { CldImage } from "next-cloudinary";
 import cx from "classnames";
-import style from "./MaterialCarousel.module.css";
 import CarouselButton from "./CarouselButton";
 
 interface MaterialCarouselProps {
@@ -11,7 +10,9 @@ interface MaterialCarouselProps {
 
 const CarouselImage = ({ image }: { image: string }) => (
   <CldImage
-    className={cx("min-h-96 w-full object-contain", style.carouselImage)}
+    className={cx(
+      "min-h-96 max-h-[50vh] w-full object-contain md:max-h-[70vh]",
+    )}
     alt={image}
     height={600}
     loading="lazy"
