@@ -31,7 +31,7 @@ const Works = () => {
               <div
                 key={`${project}_${index}`}
                 onClick={() => viewProject(project as unknown as Project)}
-                className={`polaroid-card group cursor-pointer bg-white ${project.rotation}`}
+                className="polaroid-card group cursor-pointer bg-white"
               >
                 <div
                   className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-sm bg-gradient-to-br`}

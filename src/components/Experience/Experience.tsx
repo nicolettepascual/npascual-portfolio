@@ -36,8 +36,8 @@ const Experience = () => {
                   <div
                     className={`polaroid-card ml-12 bg-white p-6 md:ml-0 md:w-[calc(50%-2rem)] ${
                       index % 2 === 0
-                        ? "rotate-1 md:mr-auto"
-                        : "-rotate-1 md:ml-auto"
+                        ? "hover:rotate-1 md:mr-auto"
+                        : "hover:-rotate-1 md:ml-auto"
                     }`}
                   >
                     <div className="mb-3 flex items-start gap-3">

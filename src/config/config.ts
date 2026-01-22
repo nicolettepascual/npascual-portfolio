@@ -70,7 +70,6 @@ export const projectsSectionData = {
       thumbnail: "portfolio/proj/dchu",
       title: "DC Heroes United",
       subtitle: "A mobile game where players shape a DC superhero story",
-      rotation: "-rotate-2",
       modalContent:
         "An interactive streaming series that presents an original storyline featuring iconic DC superheroes developed using Construct 3 for Genvid Entertainment.",
       carouselImgList: [
@@ -108,7 +107,6 @@ export const projectsSectionData = {
       modalContent:
         "A 2024 Creative Arts Emmy Award winning MILE that invites a global audience to shape an all-new Silent Hill story that could be played on a web browser. Developed with React and TypeScript.",
       carouselImgList: ["portfolio/proj/sh-1", "portfolio/proj/sh-2"],
-      rotation: "rotate-1",
       tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.GENVID, TAGS.VS_CODE],
       links: [
         {
@@ -132,7 +130,6 @@ export const projectsSectionData = {
         "A video game played on Facebook Gaming with live interactive story event based on the world of the hit TV series",
       modalContent:
         "Massively interactive live event (MILE) launching as a Facebook Gaming and Facebook Watch exclusive for Genvid Entertainment developed with React, Sass, and Genvid SDK.",
-      rotation: "-rotate-2",
       carouselImgList: [
         "portfolio/proj/twd-1",
         "portfolio/proj/twd-2",
@@ -168,7 +165,6 @@ export const projectsSectionData = {
         btnLink: "https://dynameyes.dev/portfolio.html",
       },
       carouselImgList: ["portfolio/proj/dyn"],
-      rotation: "rotate-2",
       tags: [
         TAGS.VUE,
         TAGS.TYPESCRIPT,
@@ -192,7 +188,6 @@ export const projectsSectionData = {
         "An online food reservation app for DLSU-D Food Square, developed as a college thesis project",
       modalContent:
         "An online food reservation app built as a college thesis for De La Salle University - Dasmariñas Food Square; Developed with Android Studio; Won our college's Runner Up For Best Thesis Category",
-      rotation: "rotate-2",
       carouselImgList: [
         "portfolio/proj/lfsa-1",
         "portfolio/proj/lfsa-2",

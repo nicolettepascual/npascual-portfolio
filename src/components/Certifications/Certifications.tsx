@@ -21,9 +21,7 @@ const Certifications = () => {
                 href={`${cert.link ? cert.link : ""}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`polaroid-card group bg-white p-6 transition-all duration-300 hover:scale-[1.02] ${
-                  index % 2 === 0 ? "rotate-1" : "-rotate-1"
-                } hover:rotate-0`}
+                className="polaroid-card group bg-white p-6 transition-all duration-300 hover:scale-[1.02]"
               >
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 rounded-full bg-gradient-to-br from-sky to-ocean/30 p-3">
