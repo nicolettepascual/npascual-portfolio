@@ -5,7 +5,7 @@ export const info = {
   name: "Nicolette Pascual",
   title: "Tech Professional",
   metaContent:
-    "Software Developer with experience in front-end development with React, HTML, CSS, and TypeScript.",
+    "Tech Professional with experience in admin and operations work, project coordination, and front-end development.",
   footerLink: "https://www.linkedin.com/in/nicolettepascual/",
 };
 
@@ -328,10 +328,10 @@ export const experienceSectionHeaderData = {
 export const experienceSectionData: TimelineItemData[] = [
   {
     title: "Program Coordinator",
-    organization: "1CloudHub\n(hired under Nityo Infotech Phillpines)",
+    organization: "1CloudHub\n(hired under Nityo Infotech Philippines)",
     period: "Jun 2025 - Dec 2025",
     description:
-      "Managed projects, including task assignment, timeline tracking, and follow-ups to ensure timely delivery",
+      "Managed projects through task assignment, timeline tracking, and follow-ups to ensure timely delivery",
     type: "work",
   },
   {
@@ -347,7 +347,7 @@ export const experienceSectionData: TimelineItemData[] = [
     organization: "Dynameyes, Inc.",
     period: "Jan 2020 - Jul 2022",
     description:
-      "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Fluter framework for mobile apps",
+      "Worked on several fintech projects using Vue.js framework with TypeScript for web apps and Flutter framework for mobile apps",
     type: "work",
   },
   {
