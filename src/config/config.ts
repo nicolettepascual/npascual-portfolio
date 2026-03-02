@@ -373,6 +373,14 @@ export const certificationsSectionData = {
   content: "Learning Never Stops",
   certifications: [
     {
+      title: "HubSpot Sales Hub Software Certified",
+      date: "February 2026",
+      link: "https://app-na2.hubspot.com/academy/achievements/36fv5hb7/en/1/nicolette-mikhaela-pascual/hubspot-sales-hub-software",
+      issuer: "HubSpot Academy",
+      description:
+        "Completing this course demonstrates one's ability to operate HubSpot tools for their respective sales process",
+    },
+    {
       title: "AWS Cloud Practitioner Essentials",
       date: "July 2025",
       link: "https://asset.cloudinary.com/dhxirx75d/b56cfcb9adf5ec24dc37008fa4366133",
